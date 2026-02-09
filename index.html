@@ -252,7 +252,45 @@
 
       </div>
 
-    </section><!-- /Hero Section -->
+    <!-- Brand Marquee Section -->
+    <section id="logos" class="clients-marquee">
+      <div class="container" data-aos="fade-up">
+        <h3>Trusted by Industry Leaders</h3>
+        <p class="marquee-subtext">We supply and integrate equipment from leading global brands.</p>
+        <div class="marquee-wrapper">
+          <div class="marquee-content">
+            <img src="assets/img/portfolio/brand1.png" alt="Client 1">
+            <img src="assets/img/portfolio/brand2.png" alt="Client 2">
+            <img src="assets/img/portfolio/brand3.png" alt="Client 3">
+            <img src="assets/img/portfolio/brand4.png" alt="Client 4">
+            <img src="assets/img/portfolio/brand5.png" alt="Client 5">
+            <img src="assets/img/portfolio/brand6.png" alt="Client 6">
+            <!-- Duplicate for infinite loop -->
+            <img src="assets/img/portfolio/brand1.png" alt="Client 1">
+            <img src="assets/img/portfolio/brand2.png" alt="Client 2">
+            <img src="assets/img/portfolio/brand3.png" alt="Client 3">
+            <img src="assets/img/portfolio/brand4.png" alt="Client 4">
+            <img src="assets/img/portfolio/brand5.png" alt="Client 5">
+            <img src="assets/img/portfolio/brand6.png" alt="Client 6">
+          </div>
+          <div class="marquee-content" aria-hidden="true"> <!-- Second copy to seamless seamless loop -->
+              <!-- Re-running logic manually because marquee-content is flexible and content-driven -->
+            <img src="assets/img/portfolio/brand1.png" alt="Client 1">
+            <img src="assets/img/portfolio/brand2.png" alt="Client 2">
+            <img src="assets/img/portfolio/brand3.png" alt="Client 3">
+            <img src="assets/img/portfolio/brand4.png" alt="Client 4">
+            <img src="assets/img/portfolio/brand5.png" alt="Client 5">
+            <img src="assets/img/portfolio/brand6.png" alt="Client 6">
+             <img src="assets/img/portfolio/brand1.png" alt="Client 1">
+            <img src="assets/img/portfolio/brand2.png" alt="Client 2">
+            <img src="assets/img/portfolio/brand3.png" alt="Client 3">
+            <img src="assets/img/portfolio/brand4.png" alt="Client 4">
+            <img src="assets/img/portfolio/brand5.png" alt="Client 5">
+            <img src="assets/img/portfolio/brand6.png" alt="Client 6">
+          </div>
+        </div>
+      </div>
+    </section><!-- /Brand Marquee Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -264,10 +302,10 @@
           <div class="col-xl-6 aos-init aos-animate" data-aos="fade-right" data-aos-delay="200">
             <div class="about-images-wrapper">
               <div class="image-main">
-                <img src="assets/img/about/about-5.webp" alt="Business meeting" class="img-fluid" loading="lazy">
+                <img src="assets/img/person/gas_distribution_system.png" alt="Business meeting" class="img-fluid" loading="lazy">
               </div>
               <div class="image-offset">
-                <img src="assets/img/about/about-square-3.webp" alt="Detail shot" class="img-fluid" loading="lazy">
+                <img src="assets/img/person/section3.png" alt="Detail shot" class="img-fluid" loading="lazy">
               </div>
               <div class="experience-badge">
                 <span class="years purecounter" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1">30</span>
@@ -307,32 +345,32 @@
                 </div>
               </div>
 
-              <div class="stats-row">
-                <div class="stat-box">
-                  <span class="number purecounter" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1">30</span>
-                  <span class="label">Years Experience</span>
+              <div class="stats-row d-flex justify-content-start gap-5 mb-4">
+                <div class="stat-box d-flex flex-column align-items-center">
+                  <span class="number purecounter display-6 fw-bold text-primary" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1">30</span>
+                  <span class="label text-muted small text-uppercase fw-bold mt-1">Years Experience</span>
                 </div>
-                <div class="stat-box">
-                  <span class="number purecounter" data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1">500</span>
-                  <span class="label">Global Clients</span>
+                <div class="stat-box d-flex flex-column align-items-center">
+                  <span class="number purecounter display-6 fw-bold text-primary" data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1">500</span>
+                  <span class="label text-muted small text-uppercase fw-bold mt-1">Global Clients</span>
                 </div>
-                <div class="stat-box">
-                  <span class="number purecounter" data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1">100%</span>
-                  <span class="label">Quality Tested</span>
+                <div class="stat-box d-flex flex-column align-items-center">
+                  <span class="number purecounter display-6 fw-bold text-primary" data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1">100%</span>
+                  <span class="label text-muted small text-uppercase fw-bold mt-1">Quality Tested</span>
                 </div>
               </div>
 
-              <div class="action-buttons">
-                <a href="#" class="btn btn-primary-custom">
+              <div class="action-buttons d-flex align-items-center gap-4 mt-4">
+                <a href="#services" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
                   Discover More <i class="bi bi-arrow-right"></i>
                 </a>
-                <div class="contact-info">
-                  <div class="icon-box">
+                <div class="contact-info d-flex align-items-center gap-3">
+                  <div class="icon-box d-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width: 45px; height: 45px;">
                     <i class="bi bi-telephone-fill"></i>
                   </div>
-                  <div class="text">
-                    <span>Contact Us</span>
-                    <a href="#contact">Get Best Quote</a>
+                  <div class="text d-flex flex-column">
+                    <span class="small text-muted">Contact Us</span>
+                    <a href="#contact" class="fw-bold text-dark text-decoration-none">Get Best Quote</a>
                   </div>
                 </div>
               </div>
@@ -456,27 +494,27 @@
         </div>
 
         <!-- Stats Row -->
-        <div class="stats-row" data-aos="fade-up" data-aos-delay="400">
+        <div class="services-stats-row" data-aos="fade-up" data-aos-delay="400">
           <div class="row g-4 justify-content-center">
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 text-center">
               <div class="stat-item">
                 <span class="stat-number">6000+</span>
                 <span class="stat-label">Products Installed</span>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 text-center">
               <div class="stat-item">
                 <span class="stat-number">100%</span>
                 <span class="stat-label">Safety Record</span>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 text-center">
               <div class="stat-item">
                 <span class="stat-number">ISO</span>
                 <span class="stat-label">9001 Certified</span>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 text-center">
               <div class="stat-item">
                 <span class="stat-number">24/7</span>
                 <span class="stat-label">Tech Support</span>
@@ -517,10 +555,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-indus">
               <div class="project-card">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-2.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/FITOK_valves.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/FITOK_valves.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -547,10 +585,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gen">
               <div class="project-card featured">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-4.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/nitrogen generator.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/nitrogen generator.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -578,10 +616,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-indus">
               <div class="project-card">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-6.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/pressure_regulators.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/pressure_regulators.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -608,10 +646,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-lab">
               <div class="project-card">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-8.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -638,10 +676,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sys">
               <div class="project-card">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-1.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/Gemini_Generated_Image_o2y6jgo2y6jgo2y6.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/Gemini_Generated_Image_o2y6jgo2y6jgo2y6.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -668,10 +706,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gen">
               <div class="project-card">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-3.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -698,10 +736,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sys">
               <div class="project-card featured">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-7.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/gas_distribution_system.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/gas_distribution_system.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -729,10 +767,10 @@
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-lab">
               <div class="project-card">
                 <div class="image-wrapper">
-                  <img src="assets/img/portfolio/portfolio-9.webp" alt="Project showcase" class="img-fluid" loading="lazy">
+                  <img src="assets/img/services/baths.png" alt="Project showcase" class="img-fluid" loading="lazy">
                   <div class="hover-overlay">
                     <div class="overlay-actions">
-                      <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox action-btn" data-gallery="portfolio">
+                      <a href="assets/img/services/baths.png" class="glightbox action-btn" data-gallery="portfolio">
                         <i class="bi bi-eye"></i>
                       </a>
                       <a href="#" class="action-btn">
@@ -1286,7 +1324,7 @@
                   </div>
                   <div class="method-details">
                     <span class="method-label">Email Us</span>
-                    <a href="mailto:sales@hawksbilltechnik.com">sales@hawksbilltechnik.com</a>
+                    <a href="mailto:hawksbill@hawksbill.in">hawksbill@hawksbill.in</a>
                   </div>
                 </div>
 
