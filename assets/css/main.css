@@ -7448,3 +7448,191 @@ section::after {
 .newsletter-card .social-icons i {
   font-size: 18px;
 }
+
+/*--------------------------------------------------------------
+# Services Page Enhancement
+--------------------------------------------------------------*/
+.services-main {
+  padding: 60px 0;
+}
+
+/* Search Bar */
+.search-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-wrapper {
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Minimal shadow */
+  border-radius: 50px;
+  background: white;
+  padding: 5px; /* Creates inner space */
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.search-wrapper:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12); /* Lift effect */
+  transform: translateY(-2px);
+}
+
+.search-wrapper .search-icon {
+  position: absolute;
+  left: 20px; /* Adjusted padding */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--default-color);
+  opacity: 0.6;
+}
+
+.search-wrapper input {
+  border: none;
+  background: transparent;
+  padding: 15px 20px 15px 50px; /* Room for icon */
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  color: var(--heading-color);
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Enhanced Service Card */
+.service-card-enhanced {
+  background: var(--surface-color);
+  border-radius: 16px;
+  overflow: hidden; /* For image zoom */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.service-card-enhanced:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.service-card-enhanced .card-img-top {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.service-card-enhanced .card-img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card-enhanced:hover .card-img-top img {
+  transform: scale(1.08);
+}
+
+.service-card-enhanced .card-icon {
+  position: absolute;
+  bottom: -25px; /* Overlap image/body */
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--accent-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Contrast color */
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.service-card-enhanced:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card-enhanced .card-body {
+  padding: 30px 25px 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-enhanced h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+
+.service-card-enhanced:hover h3 {
+  color: var(--accent-color);
+}
+
+.service-card-enhanced p {
+  color: var(--default-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  opacity: 0.85;
+}
+
+.service-card-enhanced .read-more {
+  margin-top: auto;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.service-card-enhanced .read-more i {
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.service-card-enhanced .read-more:hover i {
+  transform: translateX(5px);
+}
+
+/* No Results State */
+.no-results-icon {
+  font-size: 4rem;
+  color: var(--default-color);
+  opacity: 0.3;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Filter Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-card-item {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.d-none {
+    display: none !important;
+}

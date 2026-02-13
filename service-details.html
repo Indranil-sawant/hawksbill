@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Orbit Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Our Services | Hawksbill Technik</title>
+  <meta name="description" content="Explore Hawksbill Technik's comprehensive range of industrial gas solutions, FITOK instrumentation, and laboratory equipment.">
+  <meta name="keywords" content="Industrial Services, FITOK, Gas Generators, Sampling Systems, Analytical Instruments">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,6 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/service-search.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Orbit
@@ -82,274 +83,208 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title">
+    <div class="page-title" data-aos="fade">
       <div class="breadcrumbs">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="index.html#services">Services</a></li>
-            <li class="breadcrumb-item active current">FITOK Instrumentation</li>
+            <li class="breadcrumb-item active current">Our Services</li>
           </ol>
         </nav>
       </div>
-
       <div class="title-wrapper">
-        <h1>FITOK Instrumentation</h1>
-        <p>High-performance Valves, Pressure Regulators, and Fittings for industrial safety and precision.</p>
+        <h1 class="mb-3">Our Services</h1>
+        <p class="mb-0">Explore our comprehensive range of industrial fluid systems, laboratory solutions, and engineering services.</p>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+    <!-- Services Main Section -->
+    <section id="services-main" class="services-main section">
+      
+      <!-- Search Container -->
+      <div class="container mb-5" data-aos="fade-up">
+        <div class="search-container">
+            <div class="search-wrapper d-flex align-items-center">
+                 <i class="bi bi-search search-icon"></i>
+                 <input type="text" id="serviceSearch" class="form-control form-control-lg shadow-none" placeholder="Search services by keyword, category, or description...">
+            </div>
+        </div>
+      </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-          <!-- Main Content Column -->
-          <div class="col-lg-8">
-
-            <!-- Service Hero Image -->
-            <div class="service-hero" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/services/FITOK_valves.png" alt="FITOK Instrumentation" class="img-fluid">
-              <div class="service-badge">
-                <i class="bi bi-shield-check"></i>
-                <span>Authorized Distributor</span>
-              </div>
+      <div class="container">
+         <div class="row g-4" id="servicesGrid">
+            <!-- Card 1: FITOK -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+               <div class="service-card-enhanced service-card-item" data-tags="Instrumentation Valves Regulators Fittings Industrial Safety FITOK">
+                  <div class="card-img-top">
+                     <img src="assets/img/services/FITOK_valves.png" alt="FITOK Instrumentation" class="img-fluid">
+                     <div class="card-icon"><i class="bi bi-tools"></i></div>
+                  </div>
+                  <div class="card-body">
+                     <h3>FITOK Instrumentation</h3>
+                     <p>High-performance Valves, Pressure Regulators, and Fittings for industrial safety and precision applications. Authorized distributor.</p>
+                     
+                  </div>
+               </div>
             </div>
 
-            <!-- Service Overview -->
-            <div class="service-overview" data-aos="fade-up" data-aos-delay="200">
-              <div class="overview-label">
-                <span class="dot"></span>
-                <span>Value Engineered Solutions</span>
-              </div>
-              <h2>Precision Engineering for Critical Applications</h2>
-              <p>Hawksbill Technik serves as an authorized distributor and technical support partner for FITOK, a global leader in high-quality instrumentation. We provide comprehensive fluid system solutions designed to withstand extreme pressures and temperatures, ensuring safety and efficiency in your operations.</p>
-              <p>Our portfolio includes a vast range of valves, fittings, and regulators manufactured to ISO 9001:2015 standards. Every component is rigorously tested—valves are nitrogen tested at 6,000 psig to guarantee leak-free performance. Whether for Pharmaceutical R&D, Oil & Gas pipelines, or Petrochemical processing, we deliver reliability you can trust.</p>
+            <!-- Card 2: Gas Generators -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+               <div class="service-card-enhanced service-card-item" data-tags="Gas Generators Nitrogen Hydrogen Zero Air Gen LC-MS GC Lab">
+                  <div class="card-img-top">
+                     <img src="assets/img/services/nitrogen generator.png" alt="Gas Generators" class="img-fluid">
+                     <div class="card-icon"><i class="bi bi-lightning-charge"></i></div>
+                  </div>
+                  <div class="card-body">
+                     <h3>Gas Generators</h3>
+                     <p>Nitrogen, Hydrogen, and Zero Air Generators designed for critical LC-MS and GC laboratory applications.</p>
+                     
+                  </div>
+               </div>
             </div>
 
-            <!-- Key Features -->
-            <div class="key-features" data-aos="fade-up" data-aos-delay="300">
-              <h3>Technical Specifications</h3>
-              <div class="row g-4">
-                <div class="col-md-6">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="bi bi-speedometer"></i>
-                    </div>
-                    <div class="feature-content">
-                      <h4>High Pressure Rating</h4>
-                      <p>Components tested and rated up to 6,000 psig (41.4 MPa) for extreme environments.</p>
-                    </div>
+            <!-- Card 3: Sampling Systems -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+               <div class="service-card-enhanced service-card-item" data-tags="Sampling Systems Closed Loop Bombs Hazardous Gas Analysis">
+                  <div class="card-img-top">
+                     <img src="assets/img/services/Gemini_Generated_Image_o2y6jgo2y6jgo2y6.png" alt="Sampling Systems" class="img-fluid">
+                     <div class="card-icon"><i class="bi bi-droplet-half"></i></div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="bi bi-shield-check"></i>
-                    </div>
-                    <div class="feature-content">
-                      <h4>Zero Leakage</h4>
-                      <p>100% Nitrogen tested to ensure absolute seal integrity and safety for hazardous gases.</p>
-                    </div>
+                  <div class="card-body">
+                     <h3>Sampling Systems</h3>
+                     <p>Closed Loop Sampling Systems and Gas Sampling Bombs ensuring safe and accurate analysis of hazardous fluids.</p>
+                     
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="bi bi-gem"></i>
-                    </div>
-                    <div class="feature-content">
-                      <h4>Premium Material</h4>
-                      <p>Available in SS 316, Hastelloy, Monel, and Brass for superior corrosion resistance.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="bi bi-award"></i>
-                    </div>
-                    <div class="feature-content">
-                      <h4>Certified Quality</h4>
-                      <p>ISO 9001:2015 certified manufacturing with CE marking for global compliance.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+               </div>
             </div>
 
-            <!-- Process Section -->
-            <div class="service-process" data-aos="fade-up" data-aos-delay="400">
-              <h3>Implementation Process</h3>
-              <div class="process-timeline">
-                <div class="process-item">
-                  <div class="process-number">01</div>
-                  <div class="process-content">
-                    <h4>Discovery &amp; Analysis</h4>
-                    <p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat accumsan id imperdiet et.</p>
+            <!-- Card 4: Analytical Instruments -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+               <div class="service-card-enhanced service-card-item" data-tags="Analytical Instruments HPLC Column Ovens Flow Meters Pumps Lab">
+                  <div class="card-img-top">
+                     <img src="assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png" alt="Analytical Instruments" class="img-fluid">
+                     <div class="card-icon"><i class="bi bi-speedometer"></i></div>
                   </div>
-                </div>
-                <div class="process-item">
-                  <div class="process-number">02</div>
-                  <div class="process-content">
-                    <h4>Strategic Planning</h4>
-                    <p>Donec sollicitudin molestie malesuada. Praesent sapien massa convallis a pellentesque nec egestas.</p>
+                  <div class="card-body">
+                     <h3>Analytical Instruments</h3>
+                     <p>Precision HPLC Column Ovens, Flow Meters, and Vacuum Pumps for exacting laboratory measurements.</p>
+                     
                   </div>
-                </div>
-                <div class="process-item">
-                  <div class="process-number">03</div>
-                  <div class="process-content">
-                    <h4>Development &amp; Testing</h4>
-                    <p>Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet.</p>
-                  </div>
-                </div>
-                <div class="process-item">
-                  <div class="process-number">04</div>
-                  <div class="process-content">
-                    <h4>Launch &amp; Optimization</h4>
-                    <p>Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit eget tincidunt nibh.</p>
-                  </div>
-                </div>
-              </div>
+               </div>
             </div>
 
-            <!-- Gallery Section -->
-            <div class="service-gallery" data-aos="fade-up" data-aos-delay="500">
-              <h3>Product Showcase</h3>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <a href="assets/img/services/pressure_regulators.png" class="glightbox" data-gallery="service-gallery">
-                    <img src="assets/img/services/pressure_regulators.png" alt="Pressure Regulators" class="img-fluid" loading="lazy">
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <a href="assets/img/services/gas_distribution_system.png" class="glightbox" data-gallery="service-gallery">
-                    <img src="assets/img/services/gas_distribution_system.png" alt="Gas Systems" class="img-fluid" loading="lazy">
-                  </a>
-                </div>
-              </div>
+            <!-- Card 5: Industrial Projects -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+               <div class="service-card-enhanced service-card-item" data-tags="Industrial Projects Gas Distribution Systems Change Over Skids Engineering">
+                  <div class="card-img-top">
+                     <img src="assets/img/services/gas_distribution_system.png" alt="Industrial Projects" class="img-fluid">
+                     <div class="card-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                  </div>
+                  <div class="card-body">
+                     <h3>Industrial Projects</h3>
+                     <p>Turnkey Gas Distribution Systems, Automatic Changeover Panels, and Custom Engineered Skids.</p>
+                     
+                  </div>
+               </div>
             </div>
 
-          </div><!-- End Main Content Column -->
+            <!-- Card 6: Laboratory Accessories -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+               <div class="service-card-enhanced service-card-item" data-tags="Laboratory Accessories Ultrasonic Baths Sonicators Cleaning Processors">
+                  <div class="card-img-top">
+                     <img src="assets/img/services/baths.png" alt="Laboratory Accessories" class="img-fluid">
+                     <div class="card-icon"><i class="bi bi-stars"></i></div>
+                  </div>
+                  <div class="card-body">
+                     <h3>Laboratory Accessories</h3>
+                     <p>Ultrasonic Baths, Probe Sonicators, and Positive Pressure Processors for sample preparation and cleaning.</p>
+                     
+                  </div>
+               </div>
+            </div>
 
-          <!-- Sidebar Column -->
-          <div class="col-lg-4">
+         </div>
+         
+         <!-- No Results -->
+         <div id="noServicesFound" class="d-none text-center py-5">
+            <div class="no-results-icon"><i class="bi bi-search"></i></div>
+            <h3 class="h4">No services found</h3>
+            <p class="text-muted">We couldn't find any services matching your search.</p>
+            <button onclick="document.getElementById('serviceSearch').value=''; document.getElementById('serviceSearch').dispatchEvent(new Event('input'))" class="btn btn-primary rounded-pill px-4 mt-2">View All Services</button>
+         </div>
 
-            <!-- Service List -->
-            <div class="sidebar-widget service-list" data-aos="fade-up" data-aos-delay="200">
-              <h3>Our Services</h3>
-              <ul>
-                <li class="active">
-                  <a href="#">
-                    <i class="bi bi-arrow-right-circle"></i>
-                    <span>FITOK Instrumentation</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="bi bi-arrow-right-circle"></i>
-                    <span>Gas Generators</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="bi bi-arrow-right-circle"></i>
-                    <span>Sampling Systems</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="bi bi-arrow-right-circle"></i>
-                    <span>Analytical Instruments</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="bi bi-arrow-right-circle"></i>
-                    <span>Industrial Projects</span>
-                  </a>
-                </li>
+      </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section id="product-list" class="product-list section light-background">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title text-center mb-5">
+          <h2>Product Categories & Sub-Products</h2>
+          <p>Explore our detailed inventory of high-quality gas equipment and systems.</p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Gas Equipment -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
+              <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Equipment</h3>
+              <ul class="list-unstyled">
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Air Compressors</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Automatic Changeover – Mechanical / Electronic</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Cylinder Trolley & Mounting Bracket</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Cylinder Regulators</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Detection System</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Distribution Panel & Selector Boxes</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification & Control System for AAS</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification & Control System for GC</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification & Control System for ICP</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Inline Micron Filters</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Fitting Valves & Regulators</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Rotameter, Gas Sampling Bomb/Bottle, Air Header</li>
+                <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Tubing / Casing Capping</li>
               </ul>
-            </div><!-- End Service List -->
+            </div>
+          </div>
 
-            <!-- Stats Widget -->
-            <div class="sidebar-widget stats-widget" data-aos="fade-up" data-aos-delay="300">
-              <div class="stat-item">
-                <div class="stat-number">
-                  <span data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1" class="purecounter"></span>+
-                </div>
-                <p>Projects Delivered</p>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">
-                  <span data-purecounter-start="0" data-purecounter-end="99" data-purecounter-duration="1" class="purecounter"></span>%
-                </div>
-                <p>Client Satisfaction</p>
-              </div>
-              <div class="stat-item">
-                <div class="stat-number">
-                  <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>/7
-                </div>
-                <p>Support Available</p>
-              </div>
-            </div><!-- End Stats Widget -->
+          <!-- Gas Piping & Utilities Projects -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+             <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
+              <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Piping & Utilities Projects</h3>
+              <ul class="list-unstyled">
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Detector / Analyser / Detection System</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Equipment & Accessories</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Low Gas Alarm System</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Routing & Utility Pipe Routing Through Floor</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Precision Fittings</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Pressure Reducing System</li>
+                <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Completed Projects</li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- Download Brochure -->
-            <div class="sidebar-widget download-widget" data-aos="fade-up" data-aos-delay="400">
-              <h3>Resources</h3>
-              <a href="#" class="download-item">
-                <div class="download-icon">
-                  <i class="bi bi-file-earmark-pdf"></i>
-                </div>
-                <div class="download-info">
-                  <span class="file-name">FITOK Catalog</span>
-                  <span class="file-size">PDF • 12.4 MB</span>
-                </div>
-                <i class="bi bi-download"></i>
-              </a>
-              <a href="#" class="download-item">
-                <div class="download-icon">
-                  <i class="bi bi-file-earmark-text"></i>
-                </div>
-                <div class="download-info">
-                  <span class="file-name">Valve Specs</span>
-                  <span class="file-size">PDF • 1.8 MB</span>
-                </div>
-                <i class="bi bi-download"></i>
-              </a>
-              <a href="#" class="download-item">
-                <div class="download-icon">
-                  <i class="bi bi-file-earmark-spreadsheet"></i>
-                </div>
-                <div class="download-info">
-                  <span class="file-name">Compatibility Chart</span>
-                  <span class="file-size">PDF • 856 KB</span>
-                </div>
-                <i class="bi bi-download"></i>
-              </a>
-            </div><!-- End Download Widget -->
-
-            <!-- CTA Widget -->
-            <div class="sidebar-widget cta-widget" data-aos="fade-up" data-aos-delay="500">
-              <div class="cta-content">
-                <div class="cta-icon">
-                  <i class="bi bi-chat-dots"></i>
-                </div>
-                <h3>Ready to Transform Your Business?</h3>
-                <p>Connect with our specialists for a complimentary consultation.</p>
-                <a href="#" class="cta-btn">Schedule a Call <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div><!-- End CTA Widget -->
-
-          </div><!-- End Sidebar Column -->
+          <!-- Gas Generators – Ultra High Pure -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+             <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
+              <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Generators – Ultra High Pure</h3>
+              <ul class="list-unstyled">
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Generator for LCMS (Membrane Technology)</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Generator S-Series</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Hydrogen Gas Generator</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for GC</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for LC-MS / LC-MS-MS</li>
+                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for Nitrogen Concentrator / Turbo Evaporator</li>
+                <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen-Air Combination Generator for GC</li>
+              </ul>
+            </div>
+          </div>
 
         </div>
 
       </div>
-
-    </section><!-- /Service Details Section -->
+    </section>
 
   </main>
 
@@ -461,6 +396,9 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <!-- Service Search JS -->
+  <script src="assets/js/services-search.js"></script>
+  
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 

@@ -1,0 +1,59 @@
+
+/*--------------------------------------------------------------
+# Service Search Improvements
+--------------------------------------------------------------*/
+.search-wrapper {
+  position: relative; /* Ensure dropdown is positioned relative to this */
+}
+
+/* Autocomplete Dropdown */
+.autocomplete-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--surface-color);
+  border: 1px solid #dcdcdc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+/* Ensure search container is above cards */
+.search-container {
+  position: relative;
+  z-index: 999;
+}
+
+.autocomplete-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.2s;
+}
+
+.autocomplete-item:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-item:hover {
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  background-color: var(--accent-color) !important;
+  color: #ffffff;
+}
+
+/* Highlighting */
+.search-highlight {
+  background-color: #ffeb3b; /* Yellow highlight */
+  color: #000;
+  font-weight: bold;
+  padding: 0 2px;
+  border-radius: 2px;
+}
