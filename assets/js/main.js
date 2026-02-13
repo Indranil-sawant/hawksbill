@@ -66,7 +66,13 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove();
+      // Add loaded class to trigger CSS transition
+      preloader.classList.add('loaded');
+      
+      // Remove from DOM after transition completes
+      setTimeout(() => {
+        preloader.remove();
+      }, 600); // Match CSS transition duration
     });
   }
 
