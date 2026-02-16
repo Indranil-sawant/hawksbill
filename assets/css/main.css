@@ -6474,10 +6474,145 @@ section,
 --------------------------------------------------------------*/
 .modern-hero {
   padding: 80px 0;
-  background-color: #fafbfc; /* Subtle off-white */
+  background-color: #fafbfc;
+  background-image:
+    radial-gradient(circle at 2px 2px, rgba(14,165,233,0.04) 1px, transparent 0);
+  background-size: 32px 32px;
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #eef2f6;
+}
+
+/* Animated gradient orb - top right */
+.modern-hero::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(14,165,233,0.10) 0%, rgba(6,182,212,0.06) 40%, transparent 70%);
+  border-radius: 50%;
+  animation: heroOrbDrift1 12s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animated gradient orb - bottom left */
+.modern-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -8%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(14,165,233,0.07) 0%, rgba(56,189,248,0.04) 40%, transparent 70%);
+  border-radius: 50%;
+  animation: heroOrbDrift2 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes heroOrbDrift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 30px) scale(1.05); }
+}
+
+@keyframes heroOrbDrift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -25px) scale(1.08); }
+}
+
+/* Hero background decorative elements */
+.hero-bg-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.decor-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(14,165,233,0.08), transparent);
+  transform-origin: center;
+}
+
+.decor-line-1 {
+  width: 120%;
+  height: 1px;
+  top: 30%;
+  left: -10%;
+  transform: rotate(-8deg);
+  animation: lineSlide 20s ease-in-out infinite;
+}
+
+.decor-line-2 {
+  width: 100%;
+  height: 1px;
+  top: 70%;
+  left: -5%;
+  transform: rotate(5deg);
+  background: linear-gradient(90deg, transparent, rgba(6,182,212,0.06), transparent);
+  animation: lineSlide 25s ease-in-out infinite reverse;
+}
+
+@keyframes lineSlide {
+  0%, 100% { transform: rotate(-8deg) translateX(0); }
+  50% { transform: rotate(-8deg) translateX(40px); }
+}
+
+.decor-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(14,165,233,0.10);
+}
+
+.decor-dot-1 {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  left: 15%;
+  animation: dotFloat 8s ease-in-out infinite;
+}
+
+.decor-dot-2 {
+  width: 6px;
+  height: 6px;
+  top: 60%;
+  right: 25%;
+  background: rgba(6,182,212,0.12);
+  animation: dotFloat 10s ease-in-out infinite 2s;
+}
+
+.decor-dot-3 {
+  width: 10px;
+  height: 10px;
+  bottom: 25%;
+  left: 40%;
+  background: rgba(14,165,233,0.06);
+  animation: dotFloat 12s ease-in-out infinite 4s;
+}
+
+@keyframes dotFloat {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-15px); opacity: 1; }
+}
+
+.decor-ring {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 5%;
+  border: 1px dashed rgba(14,165,233,0.06);
+  border-radius: 50%;
+  animation: ringRotate 40s linear infinite;
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .modern-hero .container {
