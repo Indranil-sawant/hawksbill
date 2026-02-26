@@ -63,11 +63,11 @@
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
+  const preloader = document.querySelector('#loader-wrapper');
   if (preloader) {
     window.addEventListener('load', () => {
-      // Add loaded class to trigger CSS transition
-      preloader.classList.add('loaded');
+      // Add hidden class to trigger CSS transition
+      preloader.classList.add('hidden');
       
       // Remove from DOM after transition completes
       setTimeout(() => {

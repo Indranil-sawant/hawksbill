@@ -2229,18 +2229,21 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader-container">
-      <div class="pipeline-loader">
-        <svg viewBox="0 0 100 100" class="pipe-svg">
-          <path class="pipe-track" d="M10,50 L30,50 L30,30 L70,30 L70,70 L90,70" />
-          <path class="pipe-flow" d="M10,50 L30,50 L30,30 L70,30 L70,70 L90,70" />
+  <div id="loader-wrapper">
+    <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+            <circle class="back" cx="43" cy="43" r="40"></circle>
+            <circle class="front" cx="43" cy="43" r="40"></circle>
         </svg>
-      </div>
-      <div class="loader-text">
-        <span class="company-name">HAWKSBILL</span>
-        <span class="company-tag">TECHNIK</span>
-      </div>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+            <circle class="back" cx="30" cy="30" r="27"></circle>
+            <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+            <circle class="back" cx="17" cy="17" r="14"></circle>
+            <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text" data-text="Initializing"></div>
     </div>
   </div>
 
