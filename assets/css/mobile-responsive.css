@@ -1,0 +1,664 @@
+/*
+ * MOBILE RESPONSIVE ENHANCEMENTS — Hawksbill Technik
+ * =====================================================
+ * ADDITIVE ONLY. Zero desktop layout changes.
+ * Pure media-query overrides for 320px – 768px.
+ *
+ * Breakpoints used:
+ *   768px  — tablet portrait / small tablet
+ *   480px  — large mobile
+ *   375px  — standard iPhone
+ *   320px  — smallest supported width
+ */
+
+/* ============================================================
+   0. GLOBAL BASE — prevents horizontal scroll on all screens
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;  /* prevent iOS font inflation */
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   1. HEADER & NAVBAR
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Prevent logo from overflowing */
+  .header .logo h1 {
+    font-size: clamp(18px, 5vw, 26px);
+  }
+
+  /* "Get Best Quote" CTA — smaller on mobile */
+  .header .btn-getstarted {
+    font-size: 12px;
+    padding: 7px 14px;
+    white-space: nowrap;
+  }
+
+  /* Search bar already hidden via service-search.css @media 1199px */
+  /* Ensure header container doesn't overflow */
+  .header .container {
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo span {
+    font-size: 26px;
+  }
+
+  .header .logo h1 {
+    font-size: 18px;
+  }
+
+  /* Push CTA to hide on very small screens (hamburger is enough) */
+  .header .btn-getstarted {
+    display: none;
+  }
+}
+
+/* ============================================================
+   2. MODERN HERO SECTION
+   ============================================================ */
+@media (max-width: 768px) {
+  .modern-hero {
+    padding: 60px 0 40px;
+  }
+
+  .modern-hero-headline {
+    font-size: clamp(1.8rem, 8vw, 2.8rem) !important;
+    line-height: 1.2;
+  }
+
+  .modern-hero-subtext {
+    font-size: clamp(0.88rem, 3.5vw, 1rem);
+    line-height: 1.65;
+  }
+
+  .modern-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .modern-hero-actions a {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Hide bento grid on mobile — text content is enough */
+  .hero-bento-wrapper {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-hero {
+    padding: 48px 0 32px;
+  }
+
+  .modern-hero-headline {
+    font-size: clamp(1.6rem, 9vw, 2rem) !important;
+  }
+}
+
+/* ============================================================
+   3. HERO STATS / ORIGINAL HERO
+   ============================================================ */
+@media (max-width: 768px) {
+  .stats-grid.bento-style {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    min-height: 120px;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    line-height: 1.25;
+  }
+
+  .hero-text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid.bento-style {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================================
+   4. BRAND MARQUEE
+   ============================================================ */
+@media (max-width: 768px) {
+  .clients-marquee {
+    padding: 30px 0;
+  }
+
+  .clients-marquee h3 {
+    font-size: 1.1rem;
+  }
+
+  .marquee-content img {
+    height: 36px;
+    margin: 0 20px;
+  }
+}
+
+/* ============================================================
+   5. ABOUT SECTION
+   ============================================================ */
+@media (max-width: 768px) {
+  .about-images-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .about-images-wrapper .image-main img,
+  .about-images-wrapper .image-offset img {
+    width: 100%;
+  }
+
+  /* Hide offset image on very small screens to avoid clutter */
+  .image-offset {
+    display: none;
+  }
+
+  .experience-badge {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .newsletter-card {
+    flex-direction: column !important;
+  }
+
+  .newsletter-card .card-image {
+    width: 100% !important;
+    height: 160px;
+    overflow: hidden;
+  }
+
+  .newsletter-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .stats-row {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .action-buttons a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   6. SERVICES SECTION (index.html cards)
+   ============================================================ */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 28px 20px;
+  }
+
+  .service-card h3 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+}
+
+/* ============================================================
+   7. PORTFOLIO / PRODUCT SHOWCASE
+   ============================================================ */
+@media (max-width: 768px) {
+  .portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .portfolio-filters li {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+  }
+
+  .project-card .image-wrapper {
+    height: 200px;
+  }
+
+  .cta-section {
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .cta-content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .cta-buttons-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   8. INDUSTRIES SECTION
+   ============================================================ */
+@media (max-width: 768px) {
+  .industries-served {
+    padding: 50px 0;
+  }
+
+  .industries-served .section-heading,
+  .process-section .section-heading,
+  .case-studies .section-heading,
+  .certifications-section .section-heading,
+  .faq-section .section-heading,
+  .comparison-section .section-heading {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .industries-served .section-desc,
+  .process-section .section-desc,
+  .case-studies .section-desc,
+  .certifications-section .section-desc,
+  .faq-section .section-desc,
+  .comparison-section .section-desc {
+    font-size: 0.92rem;
+    margin-bottom: 32px;
+  }
+}
+
+/* ============================================================
+   9. HOW IT WORKS (PROCESS)
+   ============================================================ */
+@media (max-width: 768px) {
+  .process-section {
+    padding: 50px 0;
+  }
+
+  .process-step .step-card-inner {
+    padding: 24px 16px 20px;
+  }
+}
+
+/* ============================================================
+   10. CASE STUDIES
+   ============================================================ */
+@media (max-width: 480px) {
+  .case-study-card .results-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .case-study-card .card-body-content {
+    padding: 20px;
+  }
+}
+
+/* ============================================================
+   11. CERTIFICATIONS
+   ============================================================ */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 50px 0;
+  }
+
+  .cert-card {
+    padding: 24px 18px;
+  }
+
+  .compliance-strip {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+}
+
+/* ============================================================
+   12. FAQ
+   ============================================================ */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 50px 0;
+  }
+
+  .faq-sidebar {
+    padding: 28px 20px;
+    margin-bottom: 28px;
+    border-radius: 16px;
+  }
+
+  .faq-sidebar h3 {
+    font-size: 1.3rem;
+  }
+
+  .faq-sidebar .faq-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faq-accordion .accordion-button {
+    font-size: 0.88rem;
+    padding: 14px 18px;
+  }
+
+  .faq-accordion .accordion-body {
+    padding: 0 18px 16px;
+    font-size: 0.86rem;
+  }
+}
+
+/* ============================================================
+   13. COMPARISON TABLE
+   ============================================================ */
+@media (max-width: 768px) {
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table {
+    min-width: 480px; /* allow scroll rather than squish */
+  }
+
+  .comparison-table thead th,
+  .comparison-table tbody td {
+    padding: 12px 16px;
+    font-size: 0.82rem;
+  }
+}
+
+/* ============================================================
+   14. CONTACT SECTION
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Ensure inputs don't trigger zoom on iOS (font-size ≥ 16px) */
+  .php-email-form input,
+  .php-email-form textarea,
+  .php-email-form select,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Full-width form buttons */
+  .php-email-form button[type="submit"] {
+    width: 100%;
+  }
+
+  /* Contact info stack */
+  .contact .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ============================================================
+   15. SERVICE DETAILS PAGE — SIDEBAR & LAYOUT
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Collapse to single column */
+  .services-page-layout {
+    grid-template-columns: 1fr !important;
+    gap: 0;
+  }
+
+  /* Add mobile sidebar toggle button */
+  .services-sidebar {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    display: none;
+  }
+
+  .services-sidebar.open {
+    display: block;
+  }
+
+  /* Service item grid: single column on phones */
+  .svc-items-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 12px 24px;
+  }
+
+  .svc-item-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .svc-item-card-icon {
+    flex-shrink: 0;
+  }
+
+  /* Hero */
+  .svc-sub-hero {
+    min-height: 220px;
+    margin: 0 0 24px;
+  }
+
+  .svc-sub-hero-title {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  .svc-back-btn,
+  .svc-breadcrumb,
+  .svc-items-heading {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Modal full-screen on mobile */
+  .svc-modal-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100dvh;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  #svc-enquiry-modal {
+    align-items: flex-end;
+  }
+
+  /* Enquiry form */
+  .svc-form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .svc-enquire-all-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   16. INLINE NAVBAR SEARCH — already hidden at 1199px
+       Ensure search dropdown doesn't overflow viewport
+   ============================================================ */
+@media (max-width: 768px) {
+  .nav-search-dropdown {
+    width: 92vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================================
+   17. ENQUIRY MODAL (both product + service)
+   ============================================================ */
+@media (max-width: 768px) {
+  .modal-card,
+  .svc-modal-card {
+    max-height: 96dvh;
+    overflow-y: auto;
+  }
+}
+
+/* ============================================================
+   18. GENERAL SECTION PADDING SCALE
+   ============================================================ */
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .section-title p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
+  }
+}
+
+/* ============================================================
+   19. FOOTER
+   ============================================================ */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer .footer-top {
+    padding-bottom: 28px;
+  }
+
+  .footer .social-links {
+    flex-wrap: wrap;
+  }
+
+  .footer .footer-newsletter form .position-relative {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer .footer-newsletter form .btn-subscribe {
+    position: static;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+}
+
+/* ============================================================
+   20. SCROLL-TOP BUTTON — better tap target
+   ============================================================ */
+@media (max-width: 768px) {
+  .scroll-top {
+    width: 44px;
+    height: 44px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+/* ============================================================
+   21. PERFORMANCE — reduce heavy animations on mobile
+       (opacity/transform only — no layout triggers)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Reduce hover lifts to 0 on touch — they don't release properly */
+  .industry-card:hover,
+  .cert-card:hover,
+  .case-study-card:hover,
+  .service-card:hover,
+  .project-card:hover,
+  .svc-item-card:hover {
+    transform: none;
+  }
+
+  /* Shorten AOS animation duration */
+  [data-aos] {
+    transition-duration: 400ms !important;
+  }
+}
+
+/* ============================================================
+   22. TOUCH TARGET MINIMUM (44px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .navmenu a,
+  .service-link,
+  .svc-nav-link-parent,
+  .svc-nav-link-child,
+  .btn-getstarted,
+  .btn-modern-primary,
+  .btn-modern-outline,
+  .svc-back-btn,
+  .faq-cta-btn,
+  button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* ============================================================
+   23. NO HORIZONTAL SCROLL GUARD
+   ============================================================ */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Tables that could overflow */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
