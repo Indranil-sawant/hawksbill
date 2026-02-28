@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Our Services | Hawksbill Technik</title>
-  <meta name="description" content="Explore Hawksbill Technik's comprehensive range of industrial gas solutions, FITOK instrumentation, and laboratory equipment.">
-  <meta name="keywords" content="Industrial Services, FITOK, Gas Generators, Sampling Systems, Analytical Instruments">
+  <meta name="description" content="Explore Hawksbill Technik's comprehensive range of industrial gas solutions, FITOK instrumentation, sampling systems, gas generators, and laboratory equipment.">
+  <meta name="keywords" content="Industrial Services, FITOK, Gas Generators, Sampling Systems, Analytical Instruments, Hawksbill Technik">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,6 +27,12 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/service-search.css" rel="stylesheet">
+
+  <!-- Preload search modules so first click is instant -->
+  <link rel="modulepreload" href="assets/js/navbar-search.js">
+  <link rel="modulepreload" href="assets/js/services-data.js">
+  <link rel="modulepreload" href="assets/js/service-subcategory-data.js">
+  <link rel="modulepreload" href="assets/js/services-catalog.js">
 
   <!-- =======================================================
   * Template Name: Orbit
@@ -50,8 +56,8 @@
         <ul>
           <li><a href="index.html#hero">Home</a></li>
           <li><a href="index.html#about">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Products</a></li>xx
+          <li><a href="index.html#services" class="active">Services</a></li>
+          <li><a href="index.html#portfolio">Products</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -82,209 +88,235 @@
 
     <!-- Services Main Section -->
     <section id="services-main" class="services-main section">
-      
+
       <!-- Search Container -->
-      <div class="container mb-5" data-aos="fade-up">
+      <div class="container mb-4" data-aos="fade-up">
         <div class="search-container">
-            <div class="search-wrapper d-flex align-items-center">
-                 <i class="bi bi-search search-icon"></i>
-                 <input type="text" id="serviceSearch" class="form-control form-control-lg shadow-none" placeholder="Search services by keyword, category, or description...">
-            </div>
+          <div class="search-wrapper d-flex align-items-center">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" id="serviceSearch" class="form-control form-control-lg shadow-none" placeholder="Search services by keyword, category, or description...">
+          </div>
         </div>
       </div>
 
-      <div class="container">
-         <div class="row g-4" id="servicesGrid">
-            <!-- Card 1: FITOK -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-               <div class="service-card-enhanced service-card-item" data-tags="Instrumentation Valves Regulators Fittings Industrial Safety FITOK">
-                  <div class="card-img-top">
-                     <img src="assets/img/services/FITOK_valves.png" alt="FITOK Instrumentation" class="img-fluid">
-                     <div class="card-icon"><i class="bi bi-tools"></i></div>
+      <!-- Two-Column Layout: Sidebar + Content -->
+      <div class="container-fluid px-0">
+        <div class="services-page-layout">
+
+          <!-- ── SIDEBAR ── -->
+          <aside class="services-sidebar" id="services-sidebar" aria-label="Service categories navigation">
+            <div class="sidebar-heading">Browse Services</div>
+            <ul id="service-sidebar-nav-list" class="list-unstyled mb-0">
+              <!-- Dynamically populated by services-catalog.js -->
+            </ul>
+          </aside>
+
+          <!-- ── MAIN CONTENT AREA ── -->
+          <div class="services-content-area">
+
+            <!-- Dynamic injection target (subcategory pages go here) -->
+            <div id="services-root"></div>
+
+            <!-- Static Services Grid (main catalog view – shown by default) -->
+            <section id="services-static-section">
+              <div class="container px-4 pt-4">
+                <div class="row g-4" id="servicesGrid">
+
+                  <!-- Card 1: FITOK Instrumentation -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-enhanced service-card-item" data-category="fitok_instrumentation" data-tags="Instrumentation Valves Regulators Fittings Industrial Safety FITOK">
+                      <div class="card-img-top">
+                        <img src="assets/img/services/FITOK_valves.png" alt="FITOK Instrumentation" class="img-fluid">
+                        <div class="card-icon"><i class="bi bi-tools"></i></div>
+                      </div>
+                      <div class="card-body">
+                        <h3>FITOK Instrumentation</h3>
+                        <p>High-performance Valves, Pressure Regulators, and Fittings for industrial safety and precision applications. Authorized distributor.</p>
+                        <div class="mt-auto pt-3 d-flex gap-2 flex-wrap">
+                          <a href="?category=fitok_instrumentation" class="btn-service-cta" onclick="event.preventDefault(); serviceNavigateTo('fitok_instrumentation',null)">View Details <i class="bi bi-arrow-right"></i></a>
+                          <button class="btn-service-cta enquiry-trigger" data-product="FITOK Instrumentation">Enquire Now</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="card-body">
-                     <h3>FITOK Instrumentation</h3>
-                     <p>High-performance Valves, Pressure Regulators, and Fittings for industrial safety and precision applications. Authorized distributor.</p>
-                     
-                     <div class="mt-auto pt-3">
-                        <a href="#" class="btn-service-cta">Enquire Now <i class="bi bi-arrow-right"></i></a>
-                     </div>
+
+                  <!-- Card 2: Gas Generators -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-enhanced service-card-item" data-category="gas_generators" data-tags="Gas Generators Nitrogen Hydrogen Zero Air Gen LC-MS GC Lab">
+                      <div class="card-img-top">
+                        <img src="assets/img/services/nitrogen generator.png" alt="Gas Generators" class="img-fluid">
+                        <div class="card-icon"><i class="bi bi-lightning-charge"></i></div>
+                      </div>
+                      <div class="card-body">
+                        <h3>Gas Generators</h3>
+                        <p>Nitrogen, Hydrogen, and Zero Air Generators designed for critical LC-MS and GC laboratory applications.</p>
+                        <div class="mt-auto pt-3 d-flex gap-2 flex-wrap">
+                          <a href="?category=gas_generators" class="btn-service-cta" onclick="event.preventDefault(); serviceNavigateTo('gas_generators',null)">View Details <i class="bi bi-arrow-right"></i></a>
+                          <button class="btn-service-cta enquiry-trigger" data-product="Gas Generators">Enquire Now</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-               </div>
-            </div>
 
-            <!-- Card 2: Gas Generators -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-               <div class="service-card-enhanced service-card-item" data-tags="Gas Generators Nitrogen Hydrogen Zero Air Gen LC-MS GC Lab">
-                  <div class="card-img-top">
-                     <img src="assets/img/services/nitrogen generator.png" alt="Gas Generators" class="img-fluid">
-                     <div class="card-icon"><i class="bi bi-lightning-charge"></i></div>
+                  <!-- Card 3: Sampling Systems -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-enhanced service-card-item" data-category="sampling_systems" data-tags="Sampling Systems Closed Loop Bombs Hazardous Gas Analysis">
+                      <div class="card-img-top">
+                        <img src="assets/img/services/Gemini_Generated_Image_o2y6jgo2y6jgo2y6.png" alt="Sampling Systems" class="img-fluid">
+                        <div class="card-icon"><i class="bi bi-droplet-half"></i></div>
+                      </div>
+                      <div class="card-body">
+                        <h3>Sampling Systems</h3>
+                        <p>Closed Loop Sampling Systems and Gas Sampling Bombs ensuring safe and accurate analysis of hazardous fluids.</p>
+                        <div class="mt-auto pt-3 d-flex gap-2 flex-wrap">
+                          <a href="?category=sampling_systems" class="btn-service-cta" onclick="event.preventDefault(); serviceNavigateTo('sampling_systems',null)">View Details <i class="bi bi-arrow-right"></i></a>
+                          <button class="btn-service-cta enquiry-trigger" data-product="Sampling Systems">Enquire Now</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="card-body">
-                     <h3>Gas Generators</h3>
-                     <p>Nitrogen, Hydrogen, and Zero Air Generators designed for critical LC-MS and GC laboratory applications.</p>
-                     
-                     <div class="mt-auto pt-3">
-                        <a href="#" class="btn-service-cta">Enquire Now <i class="bi bi-arrow-right"></i></a>
-                     </div>
+
+                  <!-- Card 4: Analytical Instruments -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-enhanced service-card-item" data-category="analytical_instruments" data-tags="Analytical Instruments HPLC Column Ovens Flow Meters Pumps Lab">
+                      <div class="card-img-top">
+                        <img src="assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png" alt="Analytical Instruments" class="img-fluid">
+                        <div class="card-icon"><i class="bi bi-speedometer"></i></div>
+                      </div>
+                      <div class="card-body">
+                        <h3>Analytical Instruments</h3>
+                        <p>Precision HPLC Column Ovens, Flow Meters, and Vacuum Pumps for exacting laboratory measurements.</p>
+                        <div class="mt-auto pt-3 d-flex gap-2 flex-wrap">
+                          <a href="?category=analytical_instruments" class="btn-service-cta" onclick="event.preventDefault(); serviceNavigateTo('analytical_instruments',null)">View Details <i class="bi bi-arrow-right"></i></a>
+                          <button class="btn-service-cta enquiry-trigger" data-product="Analytical Instruments">Enquire Now</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-               </div>
-            </div>
 
-            <!-- Card 3: Sampling Systems -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-               <div class="service-card-enhanced service-card-item" data-tags="Sampling Systems Closed Loop Bombs Hazardous Gas Analysis">
-                  <div class="card-img-top">
-                     <img src="assets/img/services/Gemini_Generated_Image_o2y6jgo2y6jgo2y6.png" alt="Sampling Systems" class="img-fluid">
-                     <div class="card-icon"><i class="bi bi-droplet-half"></i></div>
+                  <!-- Card 5: Industrial Projects -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-enhanced service-card-item" data-category="industrial_projects" data-tags="Industrial Projects Gas Distribution Systems Change Over Skids Engineering">
+                      <div class="card-img-top">
+                        <img src="assets/img/services/gas_distribution_system.png" alt="Industrial Projects" class="img-fluid">
+                        <div class="card-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                      </div>
+                      <div class="card-body">
+                        <h3>Industrial Projects</h3>
+                        <p>Turnkey Gas Distribution Systems, Automatic Changeover Panels, and Custom Engineered Skids.</p>
+                        <div class="mt-auto pt-3 d-flex gap-2 flex-wrap">
+                          <a href="?category=industrial_projects" class="btn-service-cta" onclick="event.preventDefault(); serviceNavigateTo('industrial_projects',null)">View Details <i class="bi bi-arrow-right"></i></a>
+                          <button class="btn-service-cta enquiry-trigger" data-product="Industrial Projects">Enquire Now</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="card-body">
-                     <h3>Sampling Systems</h3>
-                     <p>Closed Loop Sampling Systems and Gas Sampling Bombs ensuring safe and accurate analysis of hazardous fluids.</p>
-                     
-                     <div class="mt-auto pt-3">
-                        <a href="#" class="btn-service-cta">Enquire Now <i class="bi bi-arrow-right"></i></a>
-                     </div>
+
+                  <!-- Card 6: Laboratory Accessories -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-enhanced service-card-item" data-category="laboratory_accessories" data-tags="Laboratory Accessories Ultrasonic Baths Sonicators Cleaning Processors">
+                      <div class="card-img-top">
+                        <img src="assets/img/services/baths.png" alt="Laboratory Accessories" class="img-fluid">
+                        <div class="card-icon"><i class="bi bi-stars"></i></div>
+                      </div>
+                      <div class="card-body">
+                        <h3>Laboratory Accessories</h3>
+                        <p>Ultrasonic Baths, Probe Sonicators, and Positive Pressure Processors for sample preparation and cleaning.</p>
+                        <div class="mt-auto pt-3 d-flex gap-2 flex-wrap">
+                          <a href="?category=laboratory_accessories" class="btn-service-cta" onclick="event.preventDefault(); serviceNavigateTo('laboratory_accessories',null)">View Details <i class="bi bi-arrow-right"></i></a>
+                          <button class="btn-service-cta enquiry-trigger" data-product="Laboratory Accessories">Enquire Now</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-               </div>
-            </div>
 
-            <!-- Card 4: Analytical Instruments -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-               <div class="service-card-enhanced service-card-item" data-tags="Analytical Instruments HPLC Column Ovens Flow Meters Pumps Lab">
-                  <div class="card-img-top">
-                     <img src="assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png" alt="Analytical Instruments" class="img-fluid">
-                     <div class="card-icon"><i class="bi bi-speedometer"></i></div>
+                </div><!-- /row -->
+
+                <!-- No Results -->
+                <div id="noServicesFound" class="d-none text-center py-5">
+                  <div class="no-results-icon"><i class="bi bi-search"></i></div>
+                  <h3 class="h4">No services found</h3>
+                  <p class="text-muted">We couldn't find any services matching your search.</p>
+                  <button onclick="document.getElementById('serviceSearch').value=''; document.getElementById('serviceSearch').dispatchEvent(new Event('input'))" class="btn btn-primary rounded-pill px-4 mt-2">View All Services</button>
+                </div>
+
+              </div>
+            </section><!-- /services-static-section -->
+
+            <!-- Product Categories Section (Static – also shown on main view) -->
+            <section id="product-list" class="product-list section light-background mt-5">
+              <div class="container px-4" data-aos="fade-up">
+
+                <div class="section-title text-center mb-5">
+                  <h2>Product Categories &amp; Sub-Products</h2>
+                  <p>Explore our detailed inventory of high-quality gas equipment and systems.</p>
+                </div>
+
+                <div class="row g-4">
+
+                  <!-- Gas Equipment -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
+                      <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Equipment</h3>
+                      <ul class="list-unstyled">
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Air Compressors</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Automatic Changeover – Mechanical / Electronic</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Cylinder Trolley &amp; Mounting Bracket</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Cylinder Regulators</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Detection System</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Distribution Panel &amp; Selector Boxes</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification &amp; Control System for AAS</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification &amp; Control System for GC</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification &amp; Control System for ICP</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Inline Micron Filters</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Fitting Valves &amp; Regulators</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Rotameter, Gas Sampling Bomb/Bottle, Air Header</li>
+                        <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Tubing / Casing Capping</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="card-body">
-                     <h3>Analytical Instruments</h3>
-                     <p>Precision HPLC Column Ovens, Flow Meters, and Vacuum Pumps for exacting laboratory measurements.</p>
-                     
-                     <div class="mt-auto pt-3">
-                        <a href="#" class="btn-service-cta">Enquire Now <i class="bi bi-arrow-right"></i></a>
-                     </div>
+
+                  <!-- Gas Piping & Utilities Projects -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
+                      <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Piping &amp; Utilities Projects</h3>
+                      <ul class="list-unstyled">
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Detector / Analyser / Detection System</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Equipment &amp; Accessories</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Low Gas Alarm System</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Routing &amp; Utility Pipe Routing Through Floor</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Precision Fittings</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Pressure Reducing System</li>
+                        <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Completed Projects</li>
+                      </ul>
+                    </div>
                   </div>
-               </div>
-            </div>
 
-            <!-- Card 5: Industrial Projects -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-               <div class="service-card-enhanced service-card-item" data-tags="Industrial Projects Gas Distribution Systems Change Over Skids Engineering">
-                  <div class="card-img-top">
-                     <img src="assets/img/services/gas_distribution_system.png" alt="Industrial Projects" class="img-fluid">
-                     <div class="card-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                  <!-- Gas Generators – Ultra High Pure -->
+                  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
+                      <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Generators – Ultra High Pure</h3>
+                      <ul class="list-unstyled">
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Generator for LCMS (Membrane Technology)</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Generator S-Series</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Hydrogen Gas Generator</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for GC</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for LC-MS / LC-MS-MS</li>
+                        <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for Nitrogen Concentrator / Turbo Evaporator</li>
+                        <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen-Air Combination Generator for GC</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="card-body">
-                     <h3>Industrial Projects</h3>
-                     <p>Turnkey Gas Distribution Systems, Automatic Changeover Panels, and Custom Engineered Skids.</p>
-                     
-                     <div class="mt-auto pt-3">
-                        <a href="#" class="btn-service-cta">Enquire Now <i class="bi bi-arrow-right"></i></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
 
-            <!-- Card 6: Laboratory Accessories -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-               <div class="service-card-enhanced service-card-item" data-tags="Laboratory Accessories Ultrasonic Baths Sonicators Cleaning Processors">
-                  <div class="card-img-top">
-                     <img src="assets/img/services/baths.png" alt="Laboratory Accessories" class="img-fluid">
-                     <div class="card-icon"><i class="bi bi-stars"></i></div>
-                  </div>
-                  <div class="card-body">
-                     <h3>Laboratory Accessories</h3>
-                     <p>Ultrasonic Baths, Probe Sonicators, and Positive Pressure Processors for sample preparation and cleaning.</p>
-                     
-                     <div class="mt-auto pt-3">
-                        <a href="#" class="btn-service-cta">Enquire Now <i class="bi bi-arrow-right"></i></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
+                </div>
+              </div>
+            </section><!-- /product-list -->
 
-         </div>
-         
-         <!-- No Results -->
-         <div id="noServicesFound" class="d-none text-center py-5">
-            <div class="no-results-icon"><i class="bi bi-search"></i></div>
-            <h3 class="h4">No services found</h3>
-            <p class="text-muted">We couldn't find any services matching your search.</p>
-            <button onclick="document.getElementById('serviceSearch').value=''; document.getElementById('serviceSearch').dispatchEvent(new Event('input'))" class="btn btn-primary rounded-pill px-4 mt-2">View All Services</button>
-         </div>
+          </div><!-- /services-content-area -->
+        </div><!-- /services-page-layout -->
+      </div><!-- /container-fluid -->
 
-      </div>
-    </section>
-
-    <!-- Product Categories Section -->
-    <section id="product-list" class="product-list section light-background">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title text-center mb-5">
-          <h2>Product Categories & Sub-Products</h2>
-          <p>Explore our detailed inventory of high-quality gas equipment and systems.</p>
-        </div>
-
-        <div class="row g-4">
-          
-          <!-- Gas Equipment -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
-              <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Equipment</h3>
-              <ul class="list-unstyled">
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Air Compressors</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Automatic Changeover – Mechanical / Electronic</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Cylinder Trolley & Mounting Bracket</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Cylinder Regulators</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Detection System</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Distribution Panel & Selector Boxes</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification & Control System for AAS</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification & Control System for GC</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Purification & Control System for ICP</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Inline Micron Filters</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Fitting Valves & Regulators</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Rotameter, Gas Sampling Bomb/Bottle, Air Header</li>
-                <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Tubing / Casing Capping</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Gas Piping & Utilities Projects -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-             <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
-              <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Piping & Utilities Projects</h3>
-              <ul class="list-unstyled">
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Detector / Analyser / Detection System</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Equipment & Accessories</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Low Gas Alarm System</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Routing & Utility Pipe Routing Through Floor</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Precision Fittings</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Pressure Reducing System</li>
-                <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Completed Projects</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Gas Generators – Ultra High Pure -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-             <div class="product-category bg-white p-4 h-100 rounded shadow-sm">
-              <h3 class="mb-3" style="color: var(--accent-color); font-size: 1.5rem; font-weight: 700;">Gas Generators – Ultra High Pure</h3>
-              <ul class="list-unstyled">
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Generator for LCMS (Membrane Technology)</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Gas Generator S-Series</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Hydrogen Gas Generator</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for GC</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for LC-MS / LC-MS-MS</li>
-                <li class="py-2 border-bottom"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen Generator for Nitrogen Concentrator / Turbo Evaporator</li>
-                <li class="py-2"><i class="bi bi-check2-circle me-2" style="color: var(--accent-color);"></i>Nitrogen-Air Combination Generator for GC</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
+    </section><!-- /services-main -->
 
     <!-- Call To Action Section -->
     <section id="call-to-action" class="cta-section">
@@ -414,6 +446,87 @@
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════════════
+       SERVICE ENQUIRY MODAL
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="svc-enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="svc-modal-heading">
+    <div class="svc-modal-card">
+
+      <!-- Header -->
+      <div class="svc-modal-header">
+        <div class="svc-modal-header-content">
+          <h4 id="svc-modal-heading">Service Enquiry</h4>
+          <span class="svc-modal-product-badge" id="svc-modal-product-name">Product</span>
+        </div>
+        <button id="svc-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <!-- Body: Form -->
+      <div class="svc-modal-body">
+        <form id="svc-enquiry-form" method="POST" target="svc-enquiry-iframe" action="#">
+
+          <!-- Hidden fields -->
+          <input type="hidden" id="svc-form-product-name" name="product_name">
+          <input type="hidden" id="svc-form-page-url" name="page_url">
+
+          <!-- Name & Company -->
+          <div class="svc-form-row">
+            <div class="form-group">
+              <label for="svc-field-name">Full Name <span style="color:#e11d48">*</span></label>
+              <input type="text" id="svc-field-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="svc-field-company">Company</label>
+              <input type="text" id="svc-field-company" name="company" placeholder="Company name">
+            </div>
+          </div>
+
+          <!-- Email & Phone -->
+          <div class="svc-form-row">
+            <div class="form-group">
+              <label for="svc-field-email">Email <span style="color:#e11d48">*</span></label>
+              <input type="email" id="svc-field-email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="svc-field-phone">Phone</label>
+              <input type="tel" id="svc-field-phone" name="phone" placeholder="+91 XXXXX XXXXX">
+            </div>
+          </div>
+
+          <!-- Enquiry Type -->
+          <div class="form-group">
+            <label for="svc-field-type">Enquiry Type</label>
+            <select id="svc-field-type" name="enquiry_type">
+              <option value="">Select type…</option>
+              <option value="quotation">Request Quotation</option>
+              <option value="technical">Technical Query</option>
+              <option value="demo">Request Demo</option>
+              <option value="support">After-Sales Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="svc-field-message">Message</label>
+            <textarea id="svc-field-message" name="message" rows="4" placeholder="Describe your requirement, quantities, or any technical specifications…"></textarea>
+          </div>
+
+          <button type="submit" class="svc-modal-submit-btn">
+            Send Enquiry <i class="bi bi-send ms-2"></i>
+          </button>
+
+          <div class="svc-status" id="svc-enquiry-status"></div>
+
+        </form>
+        <!-- Hidden iframe for form submission (no page reload) -->
+        <iframe name="svc-enquiry-iframe" style="display:none;" title="Form submission target"></iframe>
+      </div>
+
+    </div>
+  </div>
+  <!-- /Service Enquiry Modal -->
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -424,11 +537,17 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Service Search JS -->
+  <!-- Services Catalog (ES Module) -->
+  <script type="module" src="assets/js/services-catalog.js"></script>
+
+  <!-- Service Search JS (existing – non-module for compatibility) -->
   <script src="assets/js/services-search.js"></script>
-  
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Navbar Global Search (ES Module) -->
+  <script type="module" src="assets/js/navbar-search.js"></script>
 
 </body>
 
