@@ -662,3 +662,152 @@ img, video, svg {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* ============================================================
+   24. HERO SECTION — Centered, Premium, Professional
+   ============================================================ */
+
+/* ── More generous vertical breathing room ── */
+.modern-hero {
+  padding: 120px 0 100px !important;
+}
+
+/* ── Headline: tighter, more confident ── */
+.modern-hero-headline {
+  font-size: clamp(2.4rem, 4.5vw, 4rem) !important;
+  font-weight: 300 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.035em !important;
+  color: #0f172a !important;
+  margin-bottom: 1.25rem !important;
+  max-width: 620px;
+}
+
+/* Bold accent on the second line */
+.modern-hero-headline span {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+/* ── Subtext: muted, narrow column, readable ── */
+.modern-hero-subtext {
+  font-size: 1.05rem !important;
+  line-height: 1.72 !important;
+  color: #4b5563 !important;
+  max-width: 520px !important;
+  margin-bottom: 2.25rem !important;
+  font-weight: 400;
+}
+
+/* ── Buttons: premium proportions ── */
+.modern-hero-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 16px !important;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* Primary: brand accent, confident */
+.btn-modern-primary {
+  background-color: var(--accent-color, #0ea5e9) !important;
+  color: #ffffff !important;
+  border: 1.5px solid var(--accent-color, #0ea5e9) !important;
+  padding: 12px 28px !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+  transition: background 0.28s ease, transform 0.22s ease, box-shadow 0.28s ease !important;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 0 !important;
+}
+
+.btn-modern-primary:hover {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3) !important;
+}
+
+/* Secondary: outlined, refined */
+.btn-modern-outline {
+  background-color: transparent !important;
+  color: var(--accent-color, #0ea5e9) !important;
+  border: 1.5px solid var(--accent-color, #0ea5e9) !important;
+  padding: 12px 28px !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em;
+  transition: border-color 0.28s ease, background 0.28s ease, color 0.28s ease, transform 0.22s ease !important;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 0 !important;
+}
+
+.btn-modern-outline:hover {
+  background-color: var(--accent-color, #0ea5e9) !important;
+  border-color: var(--accent-color, #0ea5e9) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ── Mobile rules ── */
+@media (max-width: 991px) {
+  .modern-hero {
+    padding: 72px 0 56px !important;
+    text-align: center;
+  }
+
+  .modern-hero-headline {
+    font-size: clamp(1.9rem, 7.5vw, 2.8rem) !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modern-hero-subtext {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .modern-hero-actions {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .modern-hero {
+    padding: 56px 0 40px !important;
+  }
+
+  .modern-hero-headline {
+    font-size: clamp(1.65rem, 9vw, 2.2rem) !important;
+  }
+
+  /* Full-width stacked buttons on phones */
+  .modern-hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .btn-modern-primary,
+  .btn-modern-outline {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 48px !important;
+  }
+}
