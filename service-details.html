@@ -482,7 +482,7 @@
 
       <!-- Body: Form -->
       <div class="svc-modal-body">
-        <form id="svc-enquiry-form" method="POST" target="svc-enquiry-iframe" action="#">
+        <form id="svc-enquiry-form" novalidate>
 
           <!-- Hidden fields -->
           <input type="hidden" id="svc-form-product-name" name="product_name">
@@ -537,9 +537,15 @@
 
           <div class="svc-status" id="svc-enquiry-status"></div>
 
+          <!-- UTM + tracking (auto-filled by contact-handler.js) -->
+          <input type="hidden" name="leadSource">
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_term">
+          <input type="hidden" name="utm_content">
+
         </form>
-        <!-- Hidden iframe for form submission (no page reload) -->
-        <iframe name="svc-enquiry-iframe" style="display:none;" title="Form submission target"></iframe>
       </div>
 
     </div>
@@ -548,7 +554,8 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- validate.js removed — contact-handler.js handles form submission -->
+
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
@@ -567,6 +574,9 @@
 
   <!-- Navbar Global Search (ES Module) -->
   <script type="module" src="assets/js/navbar-search.js"></script>
+
+  <!-- Contact + Enquiry Form Handler -->
+  <script src="assets/js/contact-handler.js"></script>
 
 </body>
 

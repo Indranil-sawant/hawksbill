@@ -17,7 +17,7 @@ const DEFAULT_ICON = '⚙️';
 
 document.addEventListener('DOMContentLoaded', () => {
     initServiceCatalog();
-    setupServiceEnquiryModal();
+    // NOTE: Modal open/close + form submit handled by contact-handler.js
     setupServiceSearch();
 
     // Listen for browser back/forward buttons
