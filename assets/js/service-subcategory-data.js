@@ -5,10 +5,10 @@
  */
 
 const SERVICE_SUBCATEGORY_META = {
-    // FITOK
+    // Precision Instrumentation Fittings
     valves: {
         image: 'assets/img/services/FITOK_valves.png',
-        description: 'Explore our full range of FITOK valves — from ball and needle valves to high-pressure and multiport configurations. Authorized distributor stocking quality parts for every critical application.',
+        description: 'Explore our full range of precision instrumentation valves — from ball and needle valves to high-pressure and multiport configurations. Authorized distributor stocking quality parts for every critical application.',
     },
     pressure_regulators: {
         image: 'assets/img/services/pressure_regulators.png',
@@ -16,7 +16,7 @@ const SERVICE_SUBCATEGORY_META = {
     },
     fittings_tubing: {
         image: 'assets/img/services/FITOK_valves.png',
-        description: 'Stainless steel 316L compression fittings, compatible with Parker and Swagelok standards. Complete tubing solutions including benders, cutters, and adapters.',
+        description: 'Stainless steel 316L compression fittings, compatible with major industry standards. Complete tubing solutions including benders, cutters, and adapters.',
     },
     sampling_accessories: {
         image: 'assets/img/services/Gemini_Generated_Image_o2y6jgo2y6jgo2y6.png',

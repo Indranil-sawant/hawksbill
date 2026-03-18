@@ -8,8 +8,8 @@
  */
 
 const SERVICES_CATALOG = {
-    fitok_instrumentation: {
-        title: 'FITOK Instrumentation',
+    instrumentation_fittings: {
+        title: 'Precision Instrumentation Fittings',
         icon: 'bi-tools',
         image: 'assets/img/services/FITOK_valves.png',
         tagline: 'Authorized Distributor – Precision Instrumentation',
@@ -33,7 +33,7 @@ const SERVICES_CATALOG = {
             ],
             fittings_tubing: [
                 'Compression Tube Fittings – Stainless 316L',
-                'Parker / Swagelok Compatible Fittings',
+                'Industry-Standard Compatible Precision Fittings',
                 'NPT / BSPP / BSPT Adapters',
                 'Stainless Steel Tubing – 1/8" to 1" OD',
                 'High-Pressure Tubing',

@@ -1,7 +1,7 @@
 1. COMPANY OVERVIEW
 • Company Name: Hawksbill Technik.
 • Industry & Niche: Mechanical Instrumentation, Gas Distribution Systems, and Laboratory Research Equipment.
-• Core Business Operations: Authorized distribution and technical support for FITOK products; manufacturing and exporting high-purity gas generators and analytical instruments.
+• Core Business Operations: Authorized distribution and technical support for precision instrumentation fittings; manufacturing and exporting high-purity gas generators and analytical instruments.
 • Target Markets: Automotive, Alternate Fuel, Chemical, Petro-Chemical, Oil & Gas, Pharmaceutical, Defense, and R&D Institutes.
 • Unique Selling Points:
     ◦ Products tested with nitrogen at 6,000 psig for leak-free performance.
@@ -11,15 +11,15 @@
 
 --------------------------------------------------------------------------------
 2. SEO-READY DATA (META STRATEGY)
-• Primary Keywords: Gas Generator Manufacturer, FITOK Valves Distributor, High Pressure Gas Manifold, HPLC Column Oven, Nitrogen Generator for LC-MS, Industrial Gas Distribution.
-• Homepage Title Tag: Hawksbill Technik | FITOK Instrumentation & Laboratory Gas Solutions.
-• Meta Description: Hawksbill Technik provides high-performance FITOK valves, high-pressure sampling systems, and ISO-certified gas generators (Nitrogen, Hydrogen, Zero Air) for Pharma, Oil & Gas, and R&D industries.
+• Primary Keywords: Gas Generator Manufacturer, Instrumentation Fittings Distributor, High Pressure Gas Manifold, HPLC Column Oven, Nitrogen Generator for LC-MS, Industrial Gas Distribution.
+• Homepage Title Tag: Hawksbill Technik | Precision Instrumentation & Laboratory Gas Solutions.
+• Meta Description: Hawksbill Technik provides high-performance precision instrumentation valves, high-pressure sampling systems, and ISO-certified gas generators (Nitrogen, Hydrogen, Zero Air) for Pharma, Oil & Gas, and R&D industries.
 • H1 Header: Precision Instrumentation and Gas Purification Systems.
 
 --------------------------------------------------------------------------------
 3. PRODUCTS / SERVICES (DETAILED)
-Instrumentation & Fittings (FITOK Portfolio)
-• Valves & Regulators: FITOK Valves, Pressure Regulators, and Gas Pressure Regulators.
+Instrumentation & Fittings (Instrumentation Fittings Portfolio)
+• Valves & Regulators: Instrumentation Fittings, Pressure Regulators, and Gas Pressure Regulators.
 • Fittings & Tubing: SS Pipe/Tube Fittings and Seamless Tubing.
 • Sampling Systems: Closed Loop Sampling Systems for gases and Gas Sampling Bombs.
 Laboratory Gas Generators & Analytical Equipment
@@ -57,7 +57,7 @@ Industrial Project Services
 
 --------------------------------------------------------------------------------
 8. FINAL WEBSITE STRUCTURE (SITEMAP)
-• Home: Overview of FITOK partnership and manufacturing capabilities.
+• Home: Overview of Instrumentation Fittings partnership and manufacturing capabilities.
 • About Us: Journey (since 1994/2007/2017), Infrastructure, and Certifications.
 • Products:
     ◦ Gas Generators: Zero Air, Nitrogen, Hydrogen.

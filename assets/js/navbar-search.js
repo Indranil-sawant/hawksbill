@@ -7,7 +7,7 @@
 import SERVICES_CATALOG from './services-data.js';
 
 const CATEGORY_ICONS = {
-    fitok_instrumentation:  'bi-tools',
+    instrumentation_fittings: 'bi-tools',
     gas_generators:         'bi-lightning-charge',
     sampling_systems:       'bi-droplet-half',
     analytical_instruments: 'bi-speedometer',
