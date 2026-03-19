@@ -1,10 +1,7 @@
 /**
-* Template Name: Orbit
-* Template URL: https://bootstrapmade.com/orbit-bootstrap-template/
-* Updated: Jan 13 2026 with Bootstrap v5.3.8
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Main JS — Hawksbill Technik
+ * Designed by Aisync Software Solutions
+ */
 
 (function() {
   "use strict";
