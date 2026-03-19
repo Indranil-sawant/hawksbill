@@ -73,6 +73,17 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
+      <!-- Mobile Search Trigger Icon (visible only on mobile/tablet) -->
+      <button
+        id="mobile-search-trigger"
+        class="mobile-search-trigger"
+        aria-label="Open search"
+        aria-expanded="false"
+        aria-controls="mobile-search-overlay"
+      >
+        <i class="bi bi-search" aria-hidden="true"></i>
+      </button>
+
       <!-- Navbar Inline Search -->
       <div class="nav-search-bar" id="nav-search-bar">
         <i class="bi bi-search nav-search-icon"></i>
@@ -92,6 +103,39 @@
 
     </div>
   </header>
+
+  <!-- ── Mobile Search Overlay ───────────────────────────────── -->
+  <div
+    id="mobile-search-overlay"
+    class="mobile-search-overlay"
+    role="search"
+    aria-label="Site search"
+    hidden
+  >
+    <div class="mso-inner">
+      <div class="mso-input-wrap">
+        <i class="bi bi-search mso-icon" aria-hidden="true"></i>
+        <input
+          type="text"
+          id="mobile-search-input"
+          class="mso-input"
+          placeholder="Search services, products…"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Search services"
+        >
+        <button
+          id="mobile-search-close"
+          class="mso-close-btn"
+          aria-label="Close search"
+        >
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div id="mobile-search-dropdown" class="mso-dropdown" role="listbox"></div>
+    </div>
+  </div>
+  <!-- /Mobile Search Overlay -->
 
   <main class="main">
 
