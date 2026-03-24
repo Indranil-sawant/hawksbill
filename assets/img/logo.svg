@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Rounded square background -->
+  <rect width="48" height="48" rx="12" fill="#0f172a"/>
+  <!-- Subtle gradient overlay -->
+  <defs>
+    <radialGradient id="glow" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#glow)"/>
+
+  <!-- Turtle body (ellipse) -->
+  <ellipse cx="24" cy="25" rx="9" ry="7" fill="#0ea5e9"/>
+
+  <!-- Shell pattern lines -->
+  <ellipse cx="24" cy="25" rx="9" ry="7" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-dasharray="2.5 1.5"/>
+  <line x1="24" y1="18" x2="24" y2="32" stroke="#0f172a" stroke-width="0.7" stroke-linecap="round"/>
+  <line x1="15.2" y1="25" x2="32.8" y2="25" stroke="#0f172a" stroke-width="0.7" stroke-linecap="round"/>
+  <line x1="16.5" y1="20.5" x2="31.5" y2="29.5" stroke="#0f172a" stroke-width="0.5" stroke-linecap="round" opacity="0.6"/>
+  <line x1="31.5" y1="20.5" x2="16.5" y2="29.5" stroke="#0f172a" stroke-width="0.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Head -->
+  <ellipse cx="24" cy="16.5" rx="3.2" ry="2.5" fill="#38bdf8"/>
+  <!-- Eye -->
+  <circle cx="25.2" cy="15.6" r="0.7" fill="#0f172a"/>
+  <!-- Eye shine -->
+  <circle cx="25.5" cy="15.3" r="0.25" fill="#ffffff"/>
+
+  <!-- Neck -->
+  <rect x="22.5" y="17.8" width="3" height="2.5" rx="1.2" fill="#0ea5e9"/>
+
+  <!-- Front left flipper -->
+  <ellipse cx="13" cy="21" rx="3.5" ry="1.6" fill="#38bdf8" transform="rotate(-20 13 21)"/>
+  <!-- Front right flipper -->
+  <ellipse cx="35" cy="21" rx="3.5" ry="1.6" fill="#38bdf8" transform="rotate(20 35 21)"/>
+  <!-- Back left flipper -->
+  <ellipse cx="14.5" cy="30.5" rx="3" ry="1.4" fill="#38bdf8" transform="rotate(20 14.5 30.5)"/>
+  <!-- Back right flipper -->
+  <ellipse cx="33.5" cy="30.5" rx="3" ry="1.4" fill="#38bdf8" transform="rotate(-20 33.5 30.5)"/>
+
+  <!-- Tail -->
+  <ellipse cx="24" cy="33.5" rx="1.2" ry="2" fill="#38bdf8"/>
+</svg>

@@ -7901,13 +7901,13 @@ section::after {
 
 /* Update text visibility on light background */
 .cta-section h3 {
-  color: var(--heading-color);
+  color: var(--heading-color) !important;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
 .cta-section p {
-  color: var(--default-color);
+  color: var(--default-color) !important;
   opacity: 0.8;
   margin-bottom: 30px;
 }
@@ -7999,13 +7999,13 @@ section::after {
 .cta-text-group h3 {
   font-size: 1.5rem; /* Clean professional size */
   font-weight: 700;
-  color: var(--heading-color);
+  color: var(--heading-color) !important;
   margin-bottom: 8px;
   line-height: 1.3;
 }
 
 .cta-text-group p {
-  color: var(--default-color);
+  color: var(--default-color) !important;
   font-size: 0.95rem;
   margin-bottom: 0;
   opacity: 0.85;
