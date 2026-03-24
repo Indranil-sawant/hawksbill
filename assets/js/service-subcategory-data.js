@@ -7,15 +7,15 @@
 const SERVICE_SUBCATEGORY_META = {
     // Precision Instrumentation Fittings
     valves: {
-        image: 'assets/img/services/FITOK_valves.png',
-        description: 'Explore our full range of precision instrumentation valves — from ball and needle valves to high-pressure and multiport configurations. Authorized distributor stocking quality parts for every critical application.',
+        image: 'assets/img/services/instrumentation_valves.png',
+        description: 'Explore our full range of precision instrumentation valves — from ball and needle valves to high-pressure and multiport configurations. Stocking quality parts for every critical application.',
     },
     pressure_regulators: {
         image: 'assets/img/services/pressure_regulators.png',
         description: 'Single-stage and two-stage regulators to dome-loaded back pressure regulators. We provide precision pressure control for laboratory gas systems and industrial processes.',
     },
     fittings_tubing: {
-        image: 'assets/img/services/FITOK_valves.png',
+        image: 'assets/img/services/instrumentation_valves.png',
         description: 'Stainless steel 316L compression fittings, compatible with major industry standards. Complete tubing solutions including benders, cutters, and adapters.',
     },
     sampling_accessories: {
@@ -33,7 +33,7 @@ const SERVICE_SUBCATEGORY_META = {
         description: 'PEM electrolysis hydrogen generators delivering dry, high-purity H₂ for FID detectors and GC carrier gas applications — safe, compact, and reliable.',
     },
     zero_air_generators: {
-        image: 'assets/img/services/gas_distribution_system.png',
+        image: 'assets/img/services/medical_gas_piping.png',
         description: 'Hydrocarbon-free zero air for GC-FID baseline calibration and combustion applications. Packaged lab air systems with integrated compressor and dryer.',
     },
     gas_generator_lcms: {
@@ -75,19 +75,23 @@ const SERVICE_SUBCATEGORY_META = {
 
     // Industrial Projects
     gas_distribution: {
-        image: 'assets/img/services/gas_distribution_system.png',
-        description: 'End-to-end design and installation of central lab gas distribution systems. Automatic changeover panels, point-of-use outlets, and low-gas alarm integration.',
+        image: 'assets/img/services/medical_gas_piping.png',
+        description: 'End-to-end design and installation of central lab gas distribution systems. Complete Engineering solutions for Gas Distribution, Point-of-Use outlets, and low-gas alarm integration.',
+    },
+    medical_gas: {
+        image: 'assets/img/services/medical_gas_piping.png',
+        description: 'Specialized Medical Gas piping and systems for both high pressure and low pressure applications. Certified installation for healthcare and research facilities.',
     },
     piping_utilities: {
-        image: 'assets/img/services/gas_distribution_system.png',
+        image: 'assets/img/services/medical_gas_piping.png',
         description: 'Sealed stainless steel gas piping routed through floors and ceilings. Pressure reducing stations and compression tubing networks with full leak-testing.',
     },
     custom_skids: {
-        image: 'assets/img/services/gas_distribution_system.png',
+        image: 'assets/img/services/medical_gas_piping.png',
         description: 'Engineered-to-order process skids for gas filtration, pressure testing, and custom process control. Full documentation and CE marking available.',
     },
     gas_detection: {
-        image: 'assets/img/services/gas_distribution_system.png',
+        image: 'assets/img/services/medical_gas_piping.png',
         description: 'Fixed and portable gas detection for LEL, toxic gas, and multi-gas hazards. PLC and relay-based alarm panels with automated shutdown integration.',
     },
 
@@ -107,7 +111,7 @@ const SERVICE_SUBCATEGORY_META = {
 
     // Default fallback
     default: {
-        image: 'assets/img/services/gas_distribution_system.png',
+        image: 'assets/img/services/medical_gas_piping.png',
         description: 'Hawksbill Technik delivers premium instrumentation and engineering solutions for industrial and laboratory environments. Contact us to discuss your requirements.',
     },
 };

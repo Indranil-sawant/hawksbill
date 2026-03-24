@@ -9,10 +9,10 @@
 
 const SERVICES_CATALOG = {
     instrumentation_fittings: {
-        title: 'Precision Instrumentation Fittings',
+        title: 'Instrumentation Fittings & Valves',
         icon: 'bi-tools',
-        image: 'assets/img/services/FITOK_valves.png',
-        tagline: 'Authorized Distributor – Precision Instrumentation',
+        image: 'assets/img/services/instrumentation_valves.png',
+        tagline: 'Precision Instrumentation Fittings and Valves',
         subcategories: {
             valves: [
                 'Ball Valves – 2-Piece / 3-Piece Body',
@@ -43,7 +43,7 @@ const SERVICES_CATALOG = {
             sampling_accessories: [
                 'Cylinder Valves – CGA / DIN Standards',
                 'Inline Filters – 2 μm / 7 μm / 15 μm',
-                'Pressure Gauges – Bourdon / Digital',
+                'Gas Pressure Regulators & Gauges',
                 'Manifold Blocks – Custom Configurations',
                 'Gas Sampling Vessels',
                 'Vent & Purge Panels',
@@ -148,12 +148,13 @@ const SERVICES_CATALOG = {
     },
 
     industrial_projects: {
-        title: 'Industrial Projects',
+        title: 'Gas Distribution Systems & Engineering',
         icon: 'bi-gear-wide-connected',
-        image: 'assets/img/services/gas_distribution_system.png',
-        tagline: 'Turnkey Engineering Solutions from Design to Commissioning',
+        image: 'assets/img/services/medical_gas_piping.png',
+        tagline: 'Engineering, Installation, Testing & Commissioning for Ultra High Purity Applications',
         subcategories: {
             gas_distribution: [
+                'Complete Engineering Solutions for Gas Distribution',
                 'Central Gas Distribution Systems',
                 'Point-of-Use Gas Panels',
                 'Gas Cabinet Design & Installation',
@@ -161,12 +162,19 @@ const SERVICES_CATALOG = {
                 'Gas Manifold Systems',
                 'Low-Gas Alarm Systems',
             ],
+            medical_gas: [
+                'Medical Gas Piping Systems',
+                'High Pressure Medical Gas Applications',
+                'Low Pressure Medical Gas Distribution',
+                'Hospital Gas Utility Management',
+                'Certified Gas Delivery Networks',
+            ],
             piping_utilities: [
                 'Gas Routing & Utility Pipe Routing Through Floor / Ceiling',
                 'Stainless Steel Gas Piping – Sealed & Leak-Tested',
                 'Compression Tubing Networks',
                 'Pressure Reducing Stations',
-                'High-Pressure Hydraulic Piping',
+                'Ultra High Purity (UHP) Gas Piping',
             ],
             custom_skids: [
                 'Custom Engineered Skids',
