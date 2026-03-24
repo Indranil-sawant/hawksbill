@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow non-public/utility paths
+Disallow: /forms/
+Disallow: /assets/vendor/
+Disallow: /starter-page.html
+
+# Sitemap location
+Sitemap: https://www.hawksbill.in/sitemap.xml
