@@ -20,7 +20,8 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #f1f5f9; /* Background color for the entire website, including individual sections */
+  --background-color: #f7fbff; /* Fallback for older browsers */
+  --background-gradient: linear-gradient(135deg, #f7fbff 0%, #eaf4ff 100%); /* Global soft background gradient */
   --default-color: #475569; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #1e293b; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0ea5e9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -41,12 +42,14 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #ffffff;
+  --background-gradient: #ffffff; /* Keep light sections pure white to establish depth */
   --surface-color: #ffffff;
 }
 
 .dark-background {
   --background-color: #0d131f;
+  --background-gradient: #0d131f;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #1e293b;
@@ -65,12 +68,14 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background: var(--background-gradient, var(--background-color));
+  background-attachment: fixed;
 }
 
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: var(--background-gradient, var(--background-color));
+  background-attachment: fixed;
   font-family: var(--default-font);
   display: flex;
   flex-direction: column;
@@ -160,7 +165,7 @@ h6 {
 .header {
   --surface-color: #1b2430;
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: var(--background-gradient, var(--background-color));
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -528,7 +533,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: var(--background-gradient, var(--background-color));
   font-size: 14px;
   padding: 60px 0 30px;
   position: relative;
@@ -1041,7 +1046,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: var(--background-gradient, var(--background-color));
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
@@ -6927,13 +6932,6 @@ section,
     justify-content: center;
   }
 }
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 /*--------------------------------------------------------------
 # Modern Hero Section (New)
 --------------------------------------------------------------*/
@@ -8481,4 +8479,596 @@ section::after {
 
 .d-none {
   display: none !important;
+}
+
+/* Coverflow Carousel Styles */
+.coverflow-carousel-section {
+  padding: 96px 0 72px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+  overflow: hidden;
+  position: relative;
+  color: #0b1220;
+}
+
+/* Subtle radial glow specifically behind the carousel for elevated depth */
+.coverflow-carousel-section::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0) 55%),
+    radial-gradient(circle at 78% 35%, rgba(2, 132, 199, 0.10) 0%, rgba(2, 132, 199, 0) 55%),
+    radial-gradient(circle at 60% 85%, rgba(15, 23, 42, 0.06) 0%, rgba(15, 23, 42, 0) 55%),
+    repeating-linear-gradient(0deg, rgba(15, 23, 42, 0.04) 0, rgba(15, 23, 42, 0.04) 1px, rgba(15, 23, 42, 0) 1px, rgba(15, 23, 42, 0) 12px);
+  transform: translateZ(0);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Reference-style hero layout */
+.coverflow-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.coverflow-hero-copy {
+  max-width: 520px;
+}
+
+.coverflow-hero-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.65);
+  margin-bottom: 12px;
+}
+
+.coverflow-hero-title {
+  font-family: var(--heading-font);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  color: #0b1220;
+  margin: 0 0 14px;
+}
+
+.coverflow-hero-title span {
+  color: #0ea5e9;
+}
+
+.coverflow-hero-subtitle {
+  color: rgba(15, 23, 42, 0.70);
+  font-size: 1.03rem;
+  line-height: 1.65;
+  max-width: 52ch;
+  margin: 0 0 22px;
+}
+
+.coverflow-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.coverflow-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 999px;
+  background: #0f3d34;
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  box-shadow: 0 12px 26px rgba(15, 61, 52, 0.18);
+}
+
+.coverflow-hero-cta:hover {
+  transform: translateY(-1px);
+  background: #0b332c;
+  color: #f8fafc;
+  box-shadow: 0 18px 40px rgba(15, 61, 52, 0.22);
+}
+
+.coverflow-hero-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-avatars {
+  display: inline-flex;
+}
+
+.avatar-chip {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.14), rgba(15, 23, 42, 0.06));
+  border: 2px solid #f8fafc;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.10);
+  margin-left: -10px;
+}
+
+.avatar-chip:first-child {
+  margin-left: 0;
+}
+
+.rating-meta {
+  display: grid;
+  gap: 2px;
+}
+
+.rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+
+.rating-score {
+  margin-left: 6px;
+  color: rgba(15, 23, 42, 0.75);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.rating-sub {
+  color: rgba(15, 23, 42, 0.55);
+  font-size: 0.85rem;
+}
+
+/* Right collage */
+.coverflow-hero-visual {
+  position: relative;
+  min-height: 520px;
+}
+
+.collage-main {
+  position: relative;
+  z-index: 2;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18);
+  background: #0b1220;
+}
+
+.collage-main .coverflow-swiper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Hero swiper should fit the collage container (avoid clipped content) */
+.coverflow-hero-swiper .swiper-slide {
+  width: 100% !important;
+  height: 520px;
+}
+
+@media (max-width: 992px) {
+  .coverflow-hero-swiper .swiper-slide {
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverflow-hero-swiper .swiper-slide {
+    height: 560px;
+  }
+}
+
+@media (max-width: 576px) {
+  .coverflow-hero-swiper .swiper-slide {
+    height: 540px;
+  }
+}
+
+.collage-card {
+  position: absolute;
+  border-radius: 28px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+  z-index: 1;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.collage-card-top {
+  width: 240px;
+  height: 170px;
+  top: 0;
+  left: 14%;
+  background-image: url("../img/services/baths.png");
+}
+
+.collage-card-bottom {
+  width: 360px;
+  height: 230px;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/services/gas_distribution_system.png");
+}
+
+.collage-pill {
+  position: absolute;
+  right: 8%;
+  top: 8%;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.pill-check {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+  font-weight: 900;
+}
+
+.pill-title {
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.86);
+  line-height: 1.1;
+}
+
+.pill-sub {
+  font-size: 0.82rem;
+  color: rgba(15, 23, 42, 0.58);
+}
+
+/* Title styling for the hero carousel */
+.coverflow-carousel-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-title {
+  display: none;
+}
+
+.coverflow-carousel-section .container > p,
+.coverflow-carousel-section .carousel-subtitle {
+  color: #a1a1aa;
+  max-width: 64ch;
+  margin: 0 auto 18px;
+}
+
+.coverflow-swiper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 2; /* ensure slides stay above the radial gradient */
+}
+
+/* Ensure no navigation UI shows over the slide */
+.coverflow-swiper .swiper-button-prev,
+.coverflow-swiper .swiper-button-next,
+.coverflow-swiper .custom-nav-btn {
+  display: none !important;
+}
+
+.coverflow-swiper .swiper-slide {
+  width: 960px;
+  height: 500px;
+  border-radius: 12px; /* slight border radius */
+  box-shadow: none; /* the collage-main owns the shadow */
+}
+
+@media (max-width: 1200px) {
+  .coverflow-swiper .swiper-slide {
+    width: 800px;
+    height: 460px;
+  }
+}
+
+@media (max-width: 992px) {
+  .coverflow-swiper .swiper-slide {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverflow-swiper .swiper-slide {
+    width: 90vw;
+    height: 560px;
+  }
+}
+
+@media (max-width: 576px) {
+  .coverflow-swiper .swiper-slide {
+    width: 92vw;
+    height: 540px;
+  }
+}
+
+/* Industrial Card Full-Image Styling */
+.coverflow-swiper .industrial-card {
+  position: relative;
+  display: block; /* Full card layout */
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Thin border */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+  transition: border-color 0.4s ease;
+  background-color: #0b1220; /* fallback */
+}
+
+.coverflow-swiper .industrial-card:hover {
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+/* Image acts as full absolute background */
+.industrial-card .card-bg-img {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* smooth subtle zoom */
+}
+
+/* Add zoom on desktop hover */
+.coverflow-swiper .industrial-card:hover .card-bg-img {
+  transform: scale(1.05);
+}
+
+/* Dark Gradient Overlay */
+.industrial-card .card-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* content pushed to bottom */
+  background: linear-gradient(to top, rgba(4, 10, 20, 0.96) 0%, rgba(7, 15, 30, 0.62) 42%, rgba(7, 15, 30, 0) 100%);
+  transition: background 0.4s ease;
+}
+
+.coverflow-swiper .industrial-card:hover .card-overlay {
+  background: linear-gradient(to top, rgba(4, 10, 20, 0.98) 0%, rgba(7, 15, 30, 0.74) 45%, rgba(7, 15, 30, 0.12) 100%);
+}
+
+.industrial-card .card-content {
+  position: relative;
+  z-index: 3;
+  padding: 40px;
+  text-align: left;
+}
+
+.industrial-card .card-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: var(--heading-font);
+  letter-spacing: -0.01em;
+}
+
+/* Make slide overlay cleaner for "professional" look */
+.industrial-card .card-content {
+  padding: 34px;
+}
+
+.industrial-card .card-desc {
+  max-width: 100%;
+}
+
+/* Pagination Dots */
+.coverflow-swiper .swiper-pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  margin-top: 0;
+  z-index: 5;
+}
+
+.industrial-card .card-desc {
+  color: #cbd5e1; /* Light slate gray */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  max-width: 80%; /* Better readability line length on wide cards */
+}
+
+/* Card CTA Button */
+.industrial-card .card-footer {
+  margin-top: 25px;
+}
+
+.industrial-card .industrial-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: transparent; /* Outline style */
+  color: #0ea5e9; /* Light blue accent */
+  border: 1px solid #0ea5e9;
+  border-radius: 999px; /* premium pill */
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industrial-card .industrial-btn:hover {
+  background: #0ea5e9;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+/* Responsive updates for Industrial Card */
+@media (max-width: 1200px) {
+  .industrial-card .card-content {
+    padding: 30px;
+  }
+  .industrial-card .card-title {
+    font-size: 1.7rem;
+  }
+  .industrial-card .card-desc {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .industrial-card .card-content {
+    padding: 24px;
+  }
+  .industrial-card .card-title {
+    font-size: 1.5rem;     
+  }
+  .industrial-card .card-desc {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+  .industrial-card .industrial-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverflow-swiper .industrial-card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .coverflow-swiper .industrial-card:hover .card-bg-img {
+    transform: none; /* No hover zoom on mobile */
+  }
+  .coverflow-swiper .industrial-card:hover .card-overlay {
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 40%, rgba(15, 23, 42, 0) 100%);
+  }
+  .industrial-card .card-content {
+    padding: 22px;
+  }
+  .industrial-card .card-title {
+    font-size: 1.35rem;     
+  }
+  .industrial-card .card-desc {
+    font-size: 0.95rem;
+  }
+  .industrial-card .industrial-btn {
+    display: block; /* Make block on mobile for easy tap */
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Remove default Swiper dark shadows for cleaner look */
+.coverflow-swiper.swiper-3d .swiper-slide-shadow-left,
+.coverflow-swiper.swiper-3d .swiper-slide-shadow-right {
+  background-image: none !important;
+}
+
+/* Pagination Dots */
+.coverflow-swiper .swiper-pagination {
+  position: static; /* Let it sit below freely */
+  margin-top: 20px;
+}
+.coverflow-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  opacity: 0.3;
+  margin: 0 6px !important;
+}
+.coverflow-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--accent-color);
+}
+
+/* Layout + spacing refinements */
+@media (min-width: 992px) {
+  .coverflow-carousel-section {
+    padding: 110px 0 86px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .coverflow-carousel-section {
+    padding: 74px 0 56px;
+  }
+  .coverflow-swiper {
+    padding-top: 18px;
+  }
+
+  .coverflow-hero-visual {
+    min-height: 480px;
+  }
+  .collage-card-top,
+  .collage-card-bottom,
+  .collage-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .coverflow-hero-actions {
+    gap: 12px;
+  }
+  .coverflow-hero-cta {
+    width: 100%;
+  }
+}
+
+/* Custom Navigation buttons (PREV / NEXT overlaying the side slides) */
+.coverflow-swiper .custom-nav-btn {
+  width: 70px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  opacity: 0.85; 
+}
+.coverflow-swiper .custom-nav-btn::after {
+  display: none !important; /* Hide default swiper font icon */
+}
+.coverflow-swiper .custom-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  border-color: #fff;
+}
+
+/* Position them horizontally centered over the visible side slides */
+.coverflow-swiper .swiper-button-prev {
+  left: 10%;
+}
+.coverflow-swiper .swiper-button-next {
+  right: 10%;
+}
+
+@media (max-width: 992px) {
+  .coverflow-swiper .swiper-button-prev { left: 4%; }
+  .coverflow-swiper .swiper-button-next { right: 4%; }
+}
+
+@media (max-width: 576px) {
+  .coverflow-swiper .swiper-button-prev,
+  .coverflow-swiper .swiper-button-next { 
+    display: none !important; 
+  }
 }

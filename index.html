@@ -220,98 +220,158 @@
 
   <main class="main">
 
-    <!-- New Modern Hero Section -->
-    <section id="hero" class="modern-hero">
-      <!-- Background decorative elements -->
-      <div class="hero-bg-decor" aria-hidden="true">
-        <div class="decor-line decor-line-1"></div>
-        <div class="decor-line decor-line-2"></div>
-        <div class="decor-dot decor-dot-1"></div>
-        <div class="decor-dot decor-dot-2"></div>
-        <div class="decor-dot decor-dot-3"></div>
-        <div class="decor-ring"></div>
-      </div>
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Text Column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h1 class="modern-hero-headline">
-              Engineering at the <br>
-              <span>pace of innovation</span>
-            </h1>
-            <p class="modern-hero-subtext">
-              In an industry demanding absolute precision, Hawksbill Technik delivers ISO-certified instrumentation and gas systems you can trust.
-            </p>
-            <div class="modern-hero-actions">
-              <a href="#portfolio" class="btn-modern-primary">Explore Products</a>
-              <a href="#contact" class="btn-modern-outline">Request a Quote</a>
+    <!-- Coverflow Carousel Section (Hero) -->
+    <section class="section coverflow-carousel-section coverflow-hero" aria-label="Hero carousel">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center gy-5">
+          <!-- Left: Copy (reference-style) -->
+          <div class="col-lg-5">
+            <div class="coverflow-hero-copy">
+              <div class="coverflow-hero-kicker">— Precision Instrumentation</div>
+              <h2 class="coverflow-hero-title">
+                Instant <br>
+                Reliability with <br>
+                <span>Hawksbill Systems</span>
+              </h2>
+              <p class="coverflow-hero-subtitle">
+                ISO-certified components and gas solutions built for uptime, compliance, and repeatable performance across Pharma, Oil &amp; Gas, and R&amp;D.
+              </p>
+
+              <div class="coverflow-hero-actions">
+                <a href="service-details.html" class="coverflow-hero-cta">Explore Services</a>
+
+                <div class="coverflow-hero-rating" aria-label="Rating and reviews">
+                  <div class="rating-avatars" aria-hidden="true">
+                    <span class="avatar-chip"></span>
+                    <span class="avatar-chip"></span>
+                    <span class="avatar-chip"></span>
+                  </div>
+                  <div class="rating-meta">
+                    <div class="rating-stars" aria-hidden="true">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <span class="rating-score">4.8</span>
+                    </div>
+                    <div class="rating-sub">from 500+ reviews</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Bento Grid Column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="hero-bento-wrapper">
-              <div class="bento-grid">
-                
-                <!-- Card 1: Blue Pattern (Top Left) -->
-                <div class="bento-card card-blue-pattern">
-                   <div style="text-align:center; color:white;">
-                      <i class="bi bi-shield-check" style="font-size: 2.5rem; display:block; margin-bottom:10px;"></i>
-                      <span style="font-weight:600; font-size:0.9rem;">ISO 9001:2015</span>
-                   </div>
+          <!-- Right: Collage + Carousel as main card -->
+          <div class="col-lg-7">
+            <div class="coverflow-hero-visual" aria-hidden="true">
+              <div class="collage-card collage-card-top"></div>
+              <div class="collage-pill collage-pill-right">
+                <div class="pill-check"><i class="bi bi-check2" aria-hidden="true"></i></div>
+                <div class="pill-text">
+                  <div class="pill-title">Successful</div>
+                  <div class="pill-sub">ISO 9001:2015</div>
                 </div>
+              </div>
+              <div class="collage-card collage-card-bottom"></div>
 
-                <!-- Card 2: Report/Stats (Top Right) -->
-                <div class="bento-card card-report">
-                  <h5>System Performance</h5>
-                  <h3>Reliability</h3>
-                  <div class="stat-val">100%</div>
-                  <p style="font-size:0.8rem; color:#666; margin-top:5px;">Nitrogen Leak Tested @ 6000 psig</p>
-                  <div class="stat-chart" style="background:#e0f2fe;">
-                    <!-- Simple CSS bar chart visualization -->
-                    <div style="width:100%; height:100%; display:flex; align-items:flex-end; gap:5px; padding:0 10px 5px 10px;">
-                        <div style="width:20%; height:40%; background:#3b82f6; border-radius:3px;"></div>
-                        <div style="width:20%; height:60%; background:#3b82f6; border-radius:3px;"></div>
-                        <div style="width:20%; height:50%; background:#3b82f6; border-radius:3px;"></div>
-                        <div style="width:20%; height:80%; background:#3b82f6; border-radius:3px;"></div>
-                        <div style="width:20%; height:100%; background:#2563eb; border-radius:3px;"></div>
-                    </div>
+              <div class="collage-main">
+                <div class="swiper init-swiper coverflow-swiper coverflow-hero-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "slidesPerView": 1,
+              "centeredSlides": true,
+              "effect": "coverflow",
+              "coverflowEffect": {
+                "rotate": 0,
+                "stretch": 0,
+                "depth": 0,
+                "modifier": 1,
+                "slideShadows": false
+              },
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              }
+            }
+          </script>
+          
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide industrial-card">
+              <div class="card-bg-img" style="background-image: url('assets/img/services/baths.png');"></div>
+              <div class="card-overlay">
+                <div class="card-content">
+                  <h3 class="card-title">Ultrasonic Baths</h3>
+                  <p class="card-desc">High-powered ultrasonic cleaning systems engineered for demanding laboratory and industrial applications. Provides precise cleaning with uniform energy distribution.</p>
+                  <div class="card-footer">
+                    <a href="service-details.html" class="industrial-btn">Technical Specs</a>
                   </div>
                 </div>
-
-                <!-- Card 3: Photo (Bottom Middle) -->
-                <div class="bento-card card-photo-1">
-                    <img src="assets/img/services/me.png" alt="Lab Instrumentation" style="width:100%; height:100%; object-fit:cover;">
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="swiper-slide industrial-card">
+              <div class="card-bg-img" style="background-image: url('assets/img/services/gas_distribution_system.png');"></div>
+              <div class="card-overlay">
+                <div class="card-content">
+                  <h3 class="card-title">Gas Distribution</h3>
+                  <p class="card-desc">Complete engineering solutions, installation, and commissioning for industrial gas systems and medical gas piping. Engineered for strict compliance and safety.</p>
+                  <div class="card-footer">
+                    <a href="service-details.html" class="industrial-btn">Explore System</a>
+                  </div>
                 </div>
-
-                <!-- Card 4: Video Thumbnail (Bottom Right) -->
-                <div class="bento-card card-video">
-                   <div style="width:100%; height:100%; background:#111; position:relative; overflow:hidden;">
-                      <img src="assets/img/services/gas_distribution_system.png" alt="Product Demo" style="opacity:0.6; width:100%; height:100%; object-fit:cover;">
-                      <div class="play-btn" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; background:white; border-radius:50%; display:flex; align-items:center; justify-content:center;">
-                        <i class="bi bi-play-fill" style="color:#111; font-size:1.5rem;"></i>
-                      </div>
-                   </div>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="swiper-slide industrial-card">
+              <div class="card-bg-img" style="background-image: url('assets/img/services/nitrogen generator.png');"></div>
+              <div class="card-overlay">
+                <div class="card-content">
+                  <h3 class="card-title">Nitrogen Generators</h3>
+                  <p class="card-desc">High-purity nitrogen, hydrogen, and zero air generators engineered for LC-MS and GC applications, delivering constant pressure and absolute reliability.</p>
+                  <div class="card-footer">
+                    <a href="service-details.html" class="industrial-btn">Technical Specs</a>
+                  </div>
                 </div>
-
-                <!-- Card 5: Review (Bottom Left) -->
-                <div class="bento-card card-review">
-                   <div class="stars" style="color:#eab308; margin-bottom:5px;">
-                     <i class="bi bi-star-fill"></i>
-                     <i class="bi bi-star-fill"></i>
-                     <i class="bi bi-star-fill"></i>
-                     <i class="bi bi-star-fill"></i>
-                     <i class="bi bi-star-fill"></i>
-                   </div>
-                   <h4 style="font-size:0.9rem; margin:10px 0;">"Excellent support for our LC-MS systems."</h4>
-                   <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
-                      <div style="width:30px; height:30px; background:#f3f4f6; border-radius:50%; display:flex; align-items:center; justify-content:center;">
-                        <i class="bi bi-person-fill" style="color:#9ca3af;"></i>
-                      </div>
-                      <span style="font-size:0.8rem; color:#666;">Lab Director</span>
-                   </div>
+              </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="swiper-slide industrial-card">
+              <div class="card-bg-img" style="background-image: url('assets/img/services/pressure_regulators.png');"></div>
+              <div class="card-overlay">
+                <div class="card-content">
+                  <h3 class="card-title">Pressure Regulators</h3>
+                  <p class="card-desc">Precision-engineered high-pressure regulators providing strict flow control and pressure integrity for industrial gases and sensitive instrumentation lines.</p>
+                  <div class="card-footer">
+                    <a href="service-details.html" class="industrial-btn">View Details</a>
+                  </div>
                 </div>
-
+              </div>
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="swiper-slide industrial-card">
+              <div class="card-bg-img" style="background-image: url('assets/img/services/instrumentation_valves.png');"></div>
+              <div class="card-overlay">
+                <div class="card-content">
+                  <h3 class="card-title">Precision Valves</h3>
+                  <p class="card-desc">High-performance valves and leak-free precision fittings designed to withstand extreme industrial pressures and aggressive operating environments.</p>
+                  <div class="card-footer">
+                    <a href="service-details.html" class="industrial-btn">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-pagination mt-4"></div>
+                </div>
               </div>
             </div>
           </div>

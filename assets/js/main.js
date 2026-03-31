@@ -171,6 +171,8 @@
 
   window.addEventListener("load", initSwiper);
 
+  // (Removed premium-hero parallax/reveal JS; hero is carousel-only now)
+
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
