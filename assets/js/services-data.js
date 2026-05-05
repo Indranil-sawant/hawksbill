@@ -11,7 +11,7 @@ const SERVICES_CATALOG = {
     instrumentation_fittings: {
         title: 'Instrumentation Fittings & Valves',
         icon: 'bi-tools',
-        image: 'assets/img/services/instrumentation_valves.png',
+        image: 'assets/img/services/1 (17).webp',
         tagline: 'Precision Instrumentation Fittings and Valves',
         subcategories: {
             valves: [
@@ -54,7 +54,7 @@ const SERVICES_CATALOG = {
     gas_generators: {
         title: 'Gas Generators',
         icon: 'bi-lightning-charge',
-        image: 'assets/img/services/nitrogen generator.png',
+        image: 'assets/img/services/1 (1).webp',
         tagline: 'Ultra High-Purity Gas Generation for Laboratories',
         subcategories: {
             nitrogen_generators: [
@@ -88,7 +88,7 @@ const SERVICES_CATALOG = {
     sampling_systems: {
         title: 'Sampling Systems',
         icon: 'bi-droplet-half',
-        image: 'assets/img/services/Gemini_Generated_Image_o2y6jgo2y6jgo2y6.png',
+        image: 'assets/img/services/1 (12).webp',
         tagline: 'Safe & Accurate Analysis of Hazardous Fluids',
         subcategories: {
             closed_loop_systems: [
@@ -117,7 +117,7 @@ const SERVICES_CATALOG = {
     analytical_instruments: {
         title: 'Analytical Instruments',
         icon: 'bi-speedometer',
-        image: 'assets/img/services/Gemini_Generated_Image_tv0tdhtv0tdhtv0t.png',
+        image: 'assets/img/services/1 (10).webp',
         tagline: 'Precision Measurement for Critical Lab Workflows',
         subcategories: {
             hplc_column_ovens: [
@@ -150,7 +150,7 @@ const SERVICES_CATALOG = {
     industrial_projects: {
         title: 'Gas Distribution Systems & Engineering',
         icon: 'bi-gear-wide-connected',
-        image: 'assets/img/services/medical_gas_piping.png',
+        image: 'assets/img/services/1 (2).webp',
         tagline: 'Engineering, Installation, Testing & Commissioning for Ultra High Purity Applications',
         subcategories: {
             gas_distribution: [
@@ -195,7 +195,7 @@ const SERVICES_CATALOG = {
     laboratory_accessories: {
         title: 'Laboratory Accessories',
         icon: 'bi-stars',
-        image: 'assets/img/services/baths.png',
+        image: 'assets/img/services/1 (9).webp',
         tagline: 'Sample Preparation & Cleaning Solutions',
         subcategories: {
             ultrasonic_baths: [
